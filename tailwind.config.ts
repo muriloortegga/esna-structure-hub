@@ -31,6 +31,7 @@ export default {
         mint: "hsl(var(--mint))",
         pale: "hsl(var(--pale))",
         void: "hsl(var(--void))",
+        surf2: "hsl(var(--surf2))",
         slate: "hsl(var(--slate))",
         white: {
           DEFAULT: "hsl(var(--white-uyuni))",
@@ -55,12 +56,8 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
