@@ -86,8 +86,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-iv>
-      </section>
 
       {/* PILARES */}
       <section className="bg-pale/30 border-y border-accent/10">
