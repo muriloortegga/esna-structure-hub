@@ -29,17 +29,17 @@ export default function Header() {
       {!scrolled && (
         <div className="announcement-bar">
           <span className="flex items-center gap-2">
-            <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded-sm text-[9px] font-bold">NEW</span>
+            <span className="bg-mint text-depth px-1.5 py-0.5 rounded-sm text-[9px] font-bold">NEW</span>
             ESNA 2025 — Construindo sistemas de engenharia integrados de alta performance →
           </span>
         </div>
       )}
 
       {/* NAV BAR */}
-      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md border-b border-border-sutil" : "bg-white"}`}>
+      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-void/80 backdrop-blur-md border-b border-mint/20" : "bg-transparent"}`}>
         <div className="container-x flex items-center justify-between h-[52px]">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-sans font-bold text-[20px] tracking-tight text-void">ESNA</span>
+            <span className="font-display font-bold text-[20px] tracking-widest text-white uppercase">ESNA</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-8">
@@ -48,7 +48,7 @@ export default function Header() {
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `text-nav transition-all duration-200 hover:text-void ${isActive ? "text-void font-medium" : "text-gray-500"}`
+                  `text-nav transition-all duration-200 hover:text-white ${isActive ? "text-mint font-bold" : "text-slate"}`
                 }
               >
                 {l.label}
@@ -66,7 +66,7 @@ export default function Header() {
             <button
               aria-label="Menu"
               onClick={() => setOpen((o) => !o)}
-              className="md:hidden p-2 text-void"
+              className="md:hidden p-2 text-white"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -76,10 +76,10 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-white border-t border-border-sutil h-screen overflow-y-auto">
+        <div className="md:hidden bg-void/95 backdrop-blur-md border-t border-mint/20 h-screen overflow-y-auto">
           <div className="container-x py-10 flex flex-col gap-6">
             {links.map((l) => (
-              <NavLink key={l.to} to={l.to} className="text-[24px] font-medium text-void">
+              <NavLink key={l.to} to={l.to} className="text-[24px] font-display text-white">
                 {l.label}
               </NavLink>
             ))}

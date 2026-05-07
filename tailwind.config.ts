@@ -27,17 +27,21 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         // Design System Specific
-        // Design System Palantir.com
-        void: "#101010", // Preto total
-        surface: "#F7F7F7", // Cinza sutil alternante
-        highlight: "#1E2124", // Escuro suave
-        "border-sutil": "#D1D1D1",
-        "border-emphasis": "#101010",
+        depth: "#0C444A",
+        mint: "#9FE1CB",
+        pale: "#E1F5EE",
+        void: "#1A1C1E",
+        surf2: "#21262B",
         white: {
-          DEFAULT: "#FFFFFF",
+          DEFAULT: "#F5F3EF",
           pure: "#FFFFFF"
         },
         slate: "#7A8490",
+        black: "#111315",
+        "border-sutil": "#21262B",
+        "border-emphasis": "#0C444A",
+        surface: "#111315", // mapping surface to black
+        highlight: "#0C444A"
       },
       borderRadius: {
         none: "0",
@@ -47,10 +51,10 @@ export default {
         lg: "6px",
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
-        display: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
-        ui: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['"Calibri"', 'system-ui', 'sans-serif'],
+        display: ['"Georgia"', 'serif'],
+        ui: ['"Calibri"', 'system-ui', 'sans-serif'],
+        mono: ['"Courier New"', 'monospace'],
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',
