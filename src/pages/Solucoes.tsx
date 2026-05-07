@@ -33,28 +33,29 @@ export default function Solucoes() {
   return (
     <Layout>
       <PageHero
+        eyebrow="Nossas Frentes"
         title="Soluções completas, executadas com precisão."
-        subtitle="Quatro frentes integradas, uma única lógica: organizar a complexidade até a entrega."
+        subtitle="Quatro frentes integradas, uma única lógica: organizar a complexidade até a entrega técnica absoluta."
       />
-      <section className="container-x pb-32">
+      <section className="container-x pb-48">
         <div className="border-t border-border">
           {services.map((s) => (
             <article
               key={s.title}
-              className="border-b border-border py-12 md:py-16 grid md:grid-cols-12 gap-8 group"
+              className="border-b border-border py-16 md:py-24 grid md:grid-cols-12 gap-10 group transition-colors hover:bg-slate/5"
             >
-              <div className="md:col-span-1 text-stone text-sm tracking-widest">{s.n}</div>
+              <div className="md:col-span-1 text-teal font-bold text-sm tracking-[0.3em]">{s.n}</div>
               <div className="md:col-span-5">
-                <h2 className="display text-3xl md:text-5xl group-hover:text-ochre transition-colors duration-500">
+                <h2 className="display text-4xl md:text-6xl font-semibold leading-tight group-hover:text-teal transition-colors duration-500">
                   {s.title}
                 </h2>
               </div>
-              <div className="md:col-span-6 space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">{s.desc}</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
+              <div className="md:col-span-6 space-y-10">
+                <p className="text-xl text-slate font-medium leading-relaxed">{s.desc}</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm font-bold uppercase tracking-wider text-ink/80">
                   {s.items.map((i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <span className="w-1 h-1 bg-ochre" /> {i}
+                    <li key={i} className="flex items-center gap-3 border-l border-teal/30 pl-4 py-1">
+                       {i}
                     </li>
                   ))}
                 </ul>
@@ -62,12 +63,12 @@ export default function Solucoes() {
             </article>
           ))}
         </div>
-        <div className="mt-16 text-center">
+        <div className="mt-32 text-center">
           <Link
             to="/contato"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background hover:bg-ink/90"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-teal text-background font-bold uppercase text-sm tracking-[0.2em] hover:bg-ink transition-all duration-500"
           >
-            Conversar com o time →
+            Conversar com o time técnico
           </Link>
         </div>
       </section>

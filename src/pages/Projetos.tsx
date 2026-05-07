@@ -7,34 +7,36 @@ export default function Projetos() {
   return (
     <Layout>
       <PageHero
+        eyebrow="Portfólio"
         title="Experiência aplicada em projetos reais."
-        subtitle="Cada projeto é resolvido como um sistema. Aqui estão alguns deles."
+        subtitle="Cada projeto é resolvido como um sistema técnico integrado. Aqui estão os marcos da nossa atuação."
       />
-      <section className="container-x pb-32">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+      <section className="container-x pb-48">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-x-20 md:gap-y-32">
           {projects.map((p, i) => (
             <Link
               key={p.slug}
               to={`/projetos/${p.slug}`}
-              className={`group block ${i % 2 === 1 ? "md:mt-20" : ""}`}
+              className={`group block ${i % 2 === 1 ? "md:mt-32" : ""}`}
             >
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
+              <div className="aspect-[4/3] overflow-hidden bg-slate/10 relative">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
                   width={1200}
                   height={900}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="mt-6 flex items-baseline justify-between">
-                <h3 className="display text-2xl md:text-3xl">{p.name}</h3>
-                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+              <div className="mt-8 flex items-center justify-between border-b border-border pb-6">
+                <h3 className="display text-3xl font-semibold">{p.name}</h3>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-teal font-bold">
                   {p.type}
                 </span>
               </div>
-              <p className="mt-3 text-muted-foreground max-w-md">{p.description}</p>
+              <p className="mt-6 text-slate text-lg font-medium max-w-xl leading-relaxed">{p.description}</p>
             </Link>
           ))}
         </div>

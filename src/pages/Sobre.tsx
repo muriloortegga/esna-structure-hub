@@ -30,16 +30,23 @@ export default function Sobre() {
   return (
     <Layout>
       <PageHero
+        eyebrow="A Empresa"
         title="Clareza, estrutura e execução."
-        subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência."
+        subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência técnica."
       />
-      <section className="container-x pb-32 space-y-24">
+      <section className="container-x pb-48 space-y-40">
         {blocks.map((b, i) => (
-          <div key={b.eyebrow} className="grid md:grid-cols-12 gap-10">
-            <div className="md:col-span-4">
-              <h2 className="display text-3xl md:text-4xl">{b.title}</h2>
+          <div key={b.eyebrow} className="grid md:grid-cols-12 gap-16 relative">
+            <div className="absolute -left-10 top-0 text-[100px] font-bold text-slate/[0.05] select-none">
+              0{i + 1}
             </div>
-            <div className="md:col-span-7 md:col-start-6 space-y-5 text-lg text-muted-foreground leading-relaxed">
+            <div className="md:col-span-5 relative z-10">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6 block">
+                {b.eyebrow}
+              </span>
+              <h2 className="display text-4xl md:text-5xl font-semibold leading-tight">{b.title}</h2>
+            </div>
+            <div className="md:col-span-6 md:col-start-7 space-y-8 text-xl text-slate leading-relaxed font-medium">
               {b.body.map((p) => <p key={p}>{p}</p>)}
             </div>
           </div>

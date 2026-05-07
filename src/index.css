@@ -6,44 +6,45 @@
 
 @layer base {
   :root {
-    --background: 40 25% 96%;
-    --foreground: 30 12% 12%;
+    --background: 210 20% 98%;
+    --foreground: 210 8% 11%;
 
-    --card: 40 25% 96%;
-    --card-foreground: 30 12% 12%;
+    --card: 210 20% 98%;
+    --card-foreground: 210 8% 11%;
 
-    --popover: 40 25% 96%;
-    --popover-foreground: 30 12% 12%;
+    --popover: 210 20% 98%;
+    --popover-foreground: 210 8% 11%;
 
-    --primary: 30 12% 12%;
-    --primary-foreground: 40 25% 96%;
+    --primary: 186 72% 16%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 36 18% 90%;
-    --secondary-foreground: 30 12% 12%;
+    --secondary: 211 8% 52%;
+    --secondary-foreground: 210 8% 11%;
 
-    --muted: 36 14% 88%;
-    --muted-foreground: 30 8% 38%;
+    --muted: 211 8% 90%;
+    --muted-foreground: 211 8% 40%;
 
-    --accent: 22 70% 45%;
-    --accent-foreground: 40 25% 96%;
+    --accent: 160 52% 75%;
+    --accent-foreground: 186 72% 16%;
 
-    --destructive: 0 65% 45%;
-    --destructive-foreground: 40 25% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 30 10% 82%;
-    --input: 30 10% 82%;
-    --ring: 22 70% 45%;
+    --border: 210 8% 90%;
+    --input: 210 8% 90%;
+    --ring: 186 72% 16%;
 
-    --radius: 0.125rem;
+    --radius: 0px;
 
-    --ink: 30 14% 8%;
-    --bone: 40 30% 97%;
-    --ochre: 22 70% 45%;
-    --stone: 30 8% 38%;
+    --ink: 210 8% 11%;
+    --bone: 210 20% 98%;
+    --teal: 186 72% 16%;
+    --slate: 211 8% 52%;
+    --mint: 160 52% 75%;
 
     --gradient-fade: linear-gradient(180deg, hsl(var(--background) / 0) 0%, hsl(var(--background)) 100%);
-    --shadow-soft: 0 1px 2px hsl(30 14% 8% / 0.04), 0 8px 24px hsl(30 14% 8% / 0.06);
-    --shadow-deep: 0 20px 60px -20px hsl(30 14% 8% / 0.25);
+    --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-deep: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
     --transition-base: cubic-bezier(0.32, 0.72, 0, 1);
   }
