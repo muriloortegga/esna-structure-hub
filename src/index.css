@@ -6,50 +6,52 @@
 
 @layer base {
   :root {
-    /* Off-white background (White Uyuni) */
-    --background: 40 20% 96%;
-    --foreground: 210 8% 11%;
+    /* Dark theme — PPTX design system */
+    --background: 210 7% 11%;       /* void #1A1C1E */
+    --foreground: 36 18% 95%;       /* white-uyuni #F5F3EF */
 
-    --card: 40 20% 98%;
-    --card-foreground: 210 8% 11%;
+    --card: 210 10% 15%;            /* surf2 #21262B */
+    --card-foreground: 36 18% 95%;
 
-    --popover: 40 20% 98%;
-    --popover-foreground: 210 8% 11%;
+    --popover: 210 10% 15%;
+    --popover-foreground: 36 18% 95%;
 
     /* Verde Selva (Depth) */
-    --primary: 186 72% 16%;
-    --primary-foreground: 40 20% 96%;
+    --primary: 186 72% 17%;         /* #0C444A */
+    --primary-foreground: 36 18% 95%;
 
     /* Verde Caribe (Mint) */
-    --accent: 160 52% 75%;
-    --accent-foreground: 186 72% 16%;
+    --accent: 155 56% 75%;          /* #9FE1CB */
+    --accent-foreground: 186 72% 17%;
 
-    --secondary: 213 9% 52%;
-    --secondary-foreground: 210 8% 11%;
+    --secondary: 213 9% 52%;        /* slate #7A8490 */
+    --secondary-foreground: 36 18% 95%;
 
-    --muted: 158 48% 92%;
-    --muted-foreground: 213 9% 40%;
+    --muted: 210 8% 18%;            /* slightly lighter than void */
+    --muted-foreground: 213 9% 52%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 20% 96%;
+    --destructive-foreground: 36 18% 95%;
 
-    --border: 186 72% 16% / 0.1;
-    --input: 186 72% 16% / 0.1;
-    --ring: 186 72% 16%;
+    --border: 155 56% 75% / 0.1;
+    --input: 155 56% 75% / 0.1;
+    --ring: 155 56% 75%;
 
     --radius: 0px;
 
     /* Extra Tokens */
-    --depth: 186 72% 16%;
-    --mint: 160 52% 75%;
-    --pale: 158 48% 92%;
-    --void: 210 8% 11%;
+    --depth: 186 72% 17%;
+    --mint: 155 56% 75%;
+    --pale: 152 48% 92%;
+    --void: 210 7% 11%;
+    --surf2: 210 10% 15%;
     --slate: 213 9% 52%;
-    --white-uyuni: 40 20% 96%;
+    --white-uyuni: 36 18% 95%;
+    --black: 210 8% 8%;
 
     --gradient-fade: linear-gradient(180deg, hsl(var(--background) / 0) 0%, hsl(var(--background)) 100%);
-    --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
-    --shadow-deep: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
+    --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.2), 0 1px 2px -1px rgb(0 0 0 / 0.2);
+    --shadow-deep: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
 
     --transition-base: cubic-bezier(0.32, 0.72, 0, 1);
   }
@@ -62,7 +64,7 @@
     @apply bg-background text-foreground font-ui;
     font-feature-settings: "ss01", "cv11";
   }
-  ::selection { background: hsl(var(--primary)); color: hsl(var(--background)); }
+  ::selection { background: hsl(var(--mint)); color: hsl(var(--void)); }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
@@ -88,7 +90,8 @@
   }
 
   .rule-thin { 
-    @apply h-[1px] w-full bg-accent/40; 
+    @apply h-[1px] w-full;
+    background: hsl(var(--mint) / 0.4);
   }
 
   .stat-block {
@@ -102,15 +105,26 @@
   }
 
   .client-pill {
-    @apply px-6 py-3 bg-accent/10 border border-accent/30 font-mono text-[11px] uppercase tracking-wider text-depth text-center transition-all duration-300 hover:bg-accent/20;
+    @apply px-6 py-3 font-mono text-[11px] uppercase tracking-wider text-foreground text-center transition-all duration-300;
+    background: hsl(var(--mint) / 0.05);
+    border: 1px solid hsl(var(--mint) / 0.2);
+  }
+  .client-pill:hover {
+    background: hsl(var(--mint) / 0.15);
   }
 
   .service-card {
-    @apply relative p-8 md:p-12 border border-accent/20 bg-background transition-all duration-500 hover:border-accent/40;
+    @apply relative p-8 md:p-12 transition-all duration-500;
+    background: hsl(var(--surf2));
+    border: 1px solid hsl(var(--mint) / 0.15);
+  }
+  .service-card:hover {
+    border-color: hsl(var(--mint) / 0.4);
   }
   .service-card::before {
     content: '';
-    @apply absolute left-0 top-0 bottom-0 w-1 bg-accent/30;
+    @apply absolute left-0 top-0 bottom-0 w-1;
+    background: hsl(var(--mint) / 0.3);
   }
 
   .pillar-row {
@@ -121,7 +135,13 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-3 font-mono text-xs uppercase tracking-widest hover:bg-primary/90 transition-all duration-300;
+    @apply px-8 py-3 font-mono text-xs uppercase tracking-widest transition-all duration-300;
+    background: hsl(var(--mint));
+    color: hsl(var(--depth));
+    font-weight: 700;
+  }
+  .btn-primary:hover {
+    background: hsl(var(--mint) / 0.85);
   }
 
   .link-underline {
@@ -137,15 +157,15 @@
 
 @layer utilities {
   .grain {
-    background-image: radial-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px);
+    background-image: radial-gradient(hsl(var(--mint) / 0.03) 1px, transparent 1px);
     background-size: 4px 4px;
   }
   .pattern-stripes {
-    background-image: linear-gradient(90deg, hsl(var(--void) / 0.03) 50%, transparent 50%);
+    background-image: linear-gradient(90deg, hsl(var(--black) / 0.12) 50%, transparent 50%);
     background-size: 80px 100%;
   }
   .pattern-rects {
-    background-image: linear-gradient(90deg, hsl(var(--void) / 0.05) 1px, transparent 1px);
+    background-image: linear-gradient(90deg, hsl(var(--black) / 0.15) 1px, transparent 1px);
     background-size: 20% 100%;
   }
 }
