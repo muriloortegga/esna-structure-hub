@@ -31,7 +31,7 @@ export default function Header() {
     >
       <div className="container-x flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="display text-3xl tracking-tight text-depth">ESNA</span>
+          <span className="display text-3xl tracking-[0.2em] text-depth">ESNA</span>
           <span className="hidden md:inline text-[9px] font-mono uppercase tracking-[0.4em] text-slate mt-1.5 border-l border-accent/30 pl-3">
             Engenharia Integrada
           </span>
@@ -60,22 +60,23 @@ export default function Header() {
         <button
           aria-label="Menu"
           onClick={() => setOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 text-foreground"
+          className="md:hidden p-2 -mr-2 text-depth"
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
-          <div className="container-x py-6 flex flex-col gap-4">
+        <div className="md:hidden border-t border-accent/10 bg-background h-[calc(100vh-64px)]">
+          <div className="container-x py-12 flex flex-col gap-8">
             {links.map((l) => (
-              <NavLink key={l.to} to={l.to} className="text-lg display">
+              <NavLink key={l.to} to={l.to} className="text-4xl display text-depth">
+                <span className="text-accent mr-4 font-mono text-xl">↳</span>
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/contato" className="mt-2 text-sm border border-foreground/80 px-4 py-2 self-start">
-              Fale com a ESNA →
+            <Link to="/contato" className="btn-primary inline-flex self-start px-12 py-5 mt-10">
+              Solicitar proposta
             </Link>
           </div>
         </div>

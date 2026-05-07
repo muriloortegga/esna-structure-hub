@@ -60,10 +60,7 @@ const Index = () => {
             <span className="text-accent">↳ 03</span>
             <span>Integração</span>
           </div>
-        </div>
-      </section>
-
-      {/* POSICIONAMENTO */}
+        </div      {/* POSICIONAMENTO & STATS */}
       <section className="container-x py-32 md:py-48 relative overflow-hidden">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20vw] font-display text-depth/[0.02] select-none pointer-events-none leading-none tracking-tighter">
           ESNA
@@ -72,45 +69,71 @@ const Index = () => {
           <div className="md:col-span-7">
             <span className="earmark mb-8 block">Sobre a ESNA</span>
             <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth">
-              Uma empresa preparada para <span className="text-accent">grandes desafios</span>.
+              Uma empresa preparada para <span className="text-accent">grandes operações</span>.
             </h2>
+            <div className="mt-12 flex flex-col justify-end space-y-8 text-xl text-slate leading-relaxed font-ui max-w-xl">
+              <p>
+                A ESNA é uma empresa brasileira de engenharia integrada que atua com soluções completas para a indústria. Com abordagem sistêmica e domínio técnico comprovado.
+              </p>
+              <p className="text-depth border-l border-accent pl-8 py-2 italic">
+                Não executamos apenas tarefas avulsas. <span className="font-bold not-italic">Entregamos estrutura.</span>
+              </p>
+            </div>
           </div>
-          <div className="md:col-span-5 flex flex-col justify-end space-y-8 text-xl text-slate leading-relaxed font-ui">
-            <p>
-              Atuamos com uma abordagem sistêmica, onde cada disciplina da engenharia é integrada
-              em uma única operação estruturada e previsível.
-            </p>
-            <p className="text-depth border-l border-accent pl-8 py-2 italic">
-              Não executamos apenas tarefas avulsas. <span className="font-bold not-italic">Entregamos estrutura.</span>
-            </p>
+          <div className="md:col-span-4 md:col-start-9 flex flex-col justify-center space-y-16 py-12 px-8 bg-depth text-white relative">
+            <div className="absolute inset-0 pattern-rects opacity-10 pointer-events-none" />
+            <span className="earmark !text-mint block relative z-10">Números</span>
+            <div className="grid grid-cols-1 gap-12 relative z-10">
+              <div className="flex flex-col">
+                <span className="display text-5xl text-mint font-bold">+10</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/50 mt-2">Anos de atuação</span>
+              </div>
+              <div className="rule-thin !bg-mint/20" />
+              <div className="flex flex-col">
+                <span className="display text-5xl text-mint font-bold">9</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/50 mt-2">Áreas integradas</span>
+              </div>
+              <div className="rule-thin !bg-mint/20" />
+              <div className="flex flex-col">
+                <span className="display text-5xl text-mint font-bold">+50</span>
+                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/50 mt-2">Projetos entregues</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-iv>
-      </section>
 
-      {/* PILARES */}
-      <section className="bg-pale/30 border-y border-accent/10">
-        <div className="container-x py-24 md:py-32">
-          <div className="grid md:grid-cols-3 gap-px bg-accent/20 border border-accent/20">
+      {/* ESSÊNCIA / PILARES */}
+      <section className="bg-pale/30 border-y border-accent/10 relative overflow-hidden">
+        <div className="absolute inset-0 pattern-stripes opacity-20 pointer-events-none" />
+        <div className="container-x py-32 md:py-48 relative z-10">
+          <span className="earmark mb-8 block">Nossa Essência</span>
+          <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth mb-20">
+            Três pilares.<br />Uma integração.
+          </h2>
+          <div className="grid md:grid-cols-3 gap-16">
             {[
-              { icon: Layers, t: "Transparência", d: "Processos objetivos, comunicação direta e previsibilidade total." },
-              { icon: Boxes, t: "Estrutura", d: "Método proprietário, organização e base sólida para grandes operações." },
-              { icon: Lightbulb, t: "Integração", d: "Conectamos múltiplas disciplinas em uma única unidade de entrega." },
+              { tag: "01 — Transparência", title: "Clareza em cada etapa", d: "Processos objetivos, comunicação direta e previsibilidade total. O cliente sabe exatamente onde o projeto está." },
+              { tag: "02 — Estrutura", title: "Engenharia como sistema", d: "Organização, método e base sólida. A ESNA não executa tarefas isoladas — projeta, planeja e entrega com visão sistêmica." },
+              { tag: "03 — Integração", title: "Operação Multidisciplinar", d: "Conectamos caldeiraria, automação e elétrica em uma única operação estruturada — entregando resultado coeso." },
             ].map((p) => (
-              <div key={p.t} className="bg-background p-12 md:p-16 group transition-colors hover:bg-pale/20">
-                <p.icon className="w-8 h-8 text-accent mb-12 transition-transform duration-500 group-hover:-translate-y-2" />
-                <h3 className="display text-3xl mb-5 text-depth">{p.t}</h3>
+              <div key={p.tag} className="flex flex-col">
+                <div className="w-1.5 h-1.5 bg-accent mb-6" />
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent font-bold mb-4">↳ {p.tag}</span>
+                <h3 className="display text-2xl text-depth mb-6">{p.title}</h3>
                 <p className="text-slate font-ui leading-relaxed">{p.d}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-24 text-center">
+            <p className="display text-xl text-accent italic">"A ESNA resolve com estrutura — não apenas executa tarefas."</p>
           </div>
         </div>
       </section>
 
       {/* SOLUÇÕES */}
       <section className="container-x py-32 md:py-48">
-        <div className="flex items-end justify-between mb-20 flex-wrap gap-8">
+        <div className="flex items-end justify-between mb-24 flex-wrap gap-8">
           <div className="max-w-2xl">
             <span className="earmark mb-8 block">Expertise Técnica</span>
             <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth">
@@ -121,17 +144,17 @@ iv>
             Ver todas as soluções
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-px bg-accent/20 border border-accent/20">
+        <div className="grid md:grid-cols-2 gap-8">
           {[
-            { icon: Zap, t: "Engenharia elétrica", d: "Projetos e execução de sistemas elétricos industriais com rigor técnico absoluto." },
-            { icon: Cpu, t: "Automação e Robótica", d: "Integração tecnológica avançada para otimização e controle de plantas industriais." },
-            { icon: FileText, t: "Civil & Manutenção", d: "Infraestruturas resilientes e manutenção predial com foco em alta performance." },
-            { icon: Network, t: "Gestão & Dados", d: "Inteligência operacional e governança integrada de ativos e facilities." },
+            { tag: "ESNA INFRA", t: "Caldeiraria Industrial", d: "Grande e médio porte. Mecânica industrial, soldagem certificada e estruturas metálicas." },
+            { tag: "ESNA TECH", t: "Automação e Robótica", d: "Sistemas CLP, SCADA e robótica avançada. Indústria 4.0 com integração total de dados." },
+            { tag: "ESNA ENERGY", t: "Engenharia Elétrica", d: "Infraestrutura de grande escala, subestações e eficiência energética estratégica." },
+            { tag: "ESNA CORPORATE", t: "Gestão de Ativos", d: "Governança, compliance e gestão integrada de facilities com visão analítica." },
           ].map((s) => (
-            <div key={s.t} className="bg-background p-12 md:p-16 flex flex-col gap-8 hover:bg-pale/10 transition-colors group">
-              <s.icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-500" />
+            <div key={s.t} className="service-card group">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent font-bold block mb-4">↳ {s.tag}</span>
               <div className="space-y-4">
-                <h3 className="display text-3xl text-depth">{s.t}</h3>
+                <h3 className="display text-3xl text-depth group-hover:text-accent transition-colors duration-500">{s.t}</h3>
                 <p className="text-slate text-lg font-ui leading-relaxed">{s.d}</p>
               </div>
             </div>
@@ -139,8 +162,7 @@ iv>
         </div>
       </section>
 
-      {/* PROJETOS */}
-      {/* PROJETOS */}
+      {/* PORTFÓLIO / PROJETOS */}
       <section className="container-x py-32 md:py-48">
         <div className="flex items-end justify-between mb-24 flex-wrap gap-8">
           <div className="max-w-2xl">
@@ -185,31 +207,67 @@ iv>
         </div>
       </section>
 
-      {/* SOBRE - BRANDED VERSION */}
+      {/* CLIENTES */}
       <section className="bg-depth text-white relative overflow-hidden">
-        <div className="container-x py-32 md:py-48 grid md:grid-cols-12 gap-16 items-center">
-          <div className="md:col-span-7">
-            <span className="earmark mb-8 block !text-mint">Nossa Missão</span>
-            <h2 className="display text-5xl md:text-7xl leading-[1.05]">
-              Sustentando grandes operações com <span className="text-mint italic">domínio técnico</span>.
+        <div className="absolute inset-0 pattern-rects opacity-10 pointer-events-none" />
+        <div className="container-x py-32 md:py-48 grid md:grid-cols-12 gap-16 relative z-10">
+          <div className="md:col-span-5">
+            <span className="earmark mb-8 block !text-mint">Clientes</span>
+            <h2 className="display text-5xl md:text-6xl leading-[1.1] mb-8">
+              Grandes operações.<br />Parceiros de peso.
             </h2>
+            <div className="rule-thin !bg-mint/30 mb-8" />
+            <p className="text-xl text-white/60 leading-relaxed font-ui mb-12">
+              Atendemos empresas que exigem padrão global de qualidade, comunicação e execução técnica.
+            </p>
           </div>
-          <div className="md:col-span-5 flex flex-col space-y-10 text-xl text-white/70 leading-relaxed font-ui">
-            <p>
-              A ESNA é uma empresa brasileira de engenharia integrada que atua com soluções completas para a indústria.
-            </p>
-            <p>
-              Com abordagem sistêmica e domínio técnico comprovado, atendemos demandas complexas que exigem método, organização e execução confiável.
-            </p>
-            <Link to="/sobre" className="inline-flex items-center gap-4 text-xs font-mono font-bold uppercase tracking-[0.3em] text-mint group transition-colors hover:text-white">
-              ↳ Conheça a ESNA <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+          <div className="md:col-span-6 md:col-start-7 flex flex-col justify-center">
+             <span className="earmark mb-10 block !text-mint">Alguns clientes atendidos</span>
+             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+               {["Schuler", "Santander", "Petribu", "Grupo Olho D'Água", "FVO", "Ypê"].map(c => (
+                 <div key={c} className="client-pill !bg-mint/5 !text-white !border-mint/20 hover:!bg-mint/20">
+                   {c}
+                 </div>
+               ))}
+             </div>
+             <div className="mt-12 text-sm font-ui text-white/50 leading-relaxed">
+                A presença de empresas como Schuler e Santander reflete a capacidade da ESNA de operar no nível de clientes que exigem padrão global.
+             </div>
           </div>
         </div>
       </section>
 
+      {/* METODOLOGIA */}
+      <section className="container-x py-32 md:py-48">
+        <span className="earmark mb-8 block">Metodologia</span>
+        <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth mb-24">
+          Como a ESNA trabalha.
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          {[
+            { n: "01", t: "Diagnóstico", d: "Levantamento técnico completo e mapeamento de riscos." },
+            { n: "02", t: "Projeto", d: "Desenvolvimento técnico integrado e plano de execução." },
+            { n: "03", t: "Execução", d: "Operação com equipes coordenadas como única unidade." },
+            { n: "04", t: "Entrega", body: "Testes, documentação e transferência formal sem surpresas." },
+            { n: "05", t: "Pós-entrega", d: "Acompanhamento e suporte técnico contínuo." },
+          ].map((s, i) => (
+            <div key={s.t} className="flex flex-col items-center text-center group">
+              <div className="w-16 h-16 rounded-full border-2 border-accent/30 flex items-center justify-center display text-xl text-depth bg-pale group-hover:bg-accent group-hover:text-white transition-all duration-500 mb-8 relative">
+                {s.n}
+                {i < 4 && (
+                  <div className="hidden md:block absolute left-full top-1/2 w-8 h-px bg-accent/30 -translate-y-1/2" />
+                )}
+              </div>
+              <h3 className="display text-lg text-depth mb-4">{s.t}</h3>
+              <p className="text-sm text-slate font-ui leading-relaxed px-4">{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA FINAL */}
-      <section className="container-x py-40 md:py-60 text-center relative">
+      <section className="container-x py-40 md:py-60 text-center relative overflow-hidden">
+        <div className="absolute inset-0 pattern-stripes opacity-[0.03] pointer-events-none" />
         <div className="rule-thin absolute top-0 left-0" />
         <span className="earmark mb-10 inline-flex">Próximos Passos</span>
         <h2 className="display text-6xl md:text-[100px] max-w-5xl mx-auto leading-[1.0] text-depth">

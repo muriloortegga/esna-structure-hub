@@ -91,6 +91,35 @@
     @apply h-[1px] w-full bg-accent/40; 
   }
 
+  .stat-block {
+    @apply flex flex-col items-center text-center;
+  }
+  .stat-value {
+    @apply display text-5xl md:text-6xl text-accent font-bold leading-none;
+  }
+  .stat-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.3em] text-slate mt-4;
+  }
+
+  .client-pill {
+    @apply px-6 py-3 bg-accent/10 border border-accent/30 font-mono text-[11px] uppercase tracking-wider text-depth text-center transition-all duration-300 hover:bg-accent/20;
+  }
+
+  .service-card {
+    @apply relative p-8 md:p-12 border border-accent/20 bg-background transition-all duration-500 hover:border-accent/40;
+  }
+  .service-card::before {
+    content: '';
+    @apply absolute left-0 top-0 bottom-0 w-1 bg-accent/30;
+  }
+
+  .pillar-row {
+    @apply flex gap-6 py-6;
+  }
+  .pillar-bar {
+    @apply w-1 bg-accent shrink-0;
+  }
+
   .btn-primary {
     @apply bg-primary text-primary-foreground px-8 py-3 font-mono text-xs uppercase tracking-widest hover:bg-primary/90 transition-all duration-300;
   }
@@ -110,5 +139,13 @@
   .grain {
     background-image: radial-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px);
     background-size: 4px 4px;
+  }
+  .pattern-stripes {
+    background-image: linear-gradient(90deg, hsl(var(--void) / 0.03) 50%, transparent 50%);
+    background-size: 80px 100%;
+  }
+  .pattern-rects {
+    background-image: linear-gradient(90deg, hsl(var(--void) / 0.05) 1px, transparent 1px);
+    background-size: 20% 100%;
   }
 }
