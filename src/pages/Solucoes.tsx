@@ -38,23 +38,25 @@ export default function Solucoes() {
         subtitle="Quatro frentes integradas, uma única lógica: organizar a complexidade até a entrega técnica absoluta."
       />
       <section className="container-x pb-48">
-        <div className="border-t border-border">
+        <div className="border-t border-accent/20">
           {services.map((s) => (
             <article
               key={s.title}
-              className="border-b border-border py-16 md:py-24 grid md:grid-cols-12 gap-10 group transition-colors hover:bg-slate/5"
+              className="border-b border-accent/20 py-16 md:py-28 grid md:grid-cols-12 gap-10 group transition-colors hover:bg-pale/10"
             >
-              <div className="md:col-span-1 text-teal font-bold text-sm tracking-[0.3em]">{s.n}</div>
+              <div className="md:col-span-1">
+                <span className="earmark">{s.n}</span>
+              </div>
               <div className="md:col-span-5">
-                <h2 className="display text-4xl md:text-6xl font-semibold leading-tight group-hover:text-teal transition-colors duration-500">
+                <h2 className="display text-4xl md:text-6xl leading-[1.1] text-depth group-hover:text-accent transition-colors duration-500">
                   {s.title}
                 </h2>
               </div>
-              <div className="md:col-span-6 space-y-10">
-                <p className="text-xl text-slate font-medium leading-relaxed">{s.desc}</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm font-bold uppercase tracking-wider text-ink/80">
+              <div className="md:col-span-6 space-y-12">
+                <p className="text-xl text-slate font-ui leading-relaxed">{s.desc}</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                   {s.items.map((i) => (
-                    <li key={i} className="flex items-center gap-3 border-l border-teal/30 pl-4 py-1">
+                    <li key={i} className="flex items-center gap-3 border-l border-accent/30 pl-5 py-1 font-mono text-[11px] uppercase tracking-[0.2em] text-depth/80">
                        {i}
                     </li>
                   ))}
@@ -66,7 +68,7 @@ export default function Solucoes() {
         <div className="mt-32 text-center">
           <Link
             to="/contato"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-teal text-background font-bold uppercase text-sm tracking-[0.2em] hover:bg-ink transition-all duration-500"
+            className="btn-primary inline-flex"
           >
             Conversar com o time técnico
           </Link>

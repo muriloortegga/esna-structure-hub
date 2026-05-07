@@ -19,11 +19,6 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        ink: "hsl(var(--ink))",
-        bone: "hsl(var(--bone))",
-        teal: "hsl(var(--teal))",
-        slate: "hsl(var(--slate))",
-        mint: "hsl(var(--mint))",
         primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
         secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
         destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
@@ -31,6 +26,16 @@ export default {
         accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+        // Design System Specific
+        depth: "hsl(var(--depth))",
+        mint: "hsl(var(--mint))",
+        pale: "hsl(var(--pale))",
+        void: "hsl(var(--void))",
+        slate: "hsl(var(--slate))",
+        white: {
+          DEFAULT: "hsl(var(--white-uyuni))",
+          pure: "#FFFFFF"
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -38,8 +43,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'serif'],
+        display: ['Georgia', 'serif'],
+        ui: ['Calibri', 'system-ui', 'sans-serif'],
+        mono: ['Courier New', 'monospace'],
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',

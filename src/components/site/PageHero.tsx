@@ -7,19 +7,19 @@ export default function PageHero({ title, subtitle, eyebrow }: Props) {
   return (
     <section className="container-x pt-28 md:pt-40 pb-16 md:pb-24">
       {eyebrow && (
-        <span className="block text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6">
+        <span className="earmark mb-8">
           {eyebrow}
         </span>
       )}
-      <h1 className="display text-5xl md:text-8xl max-w-5xl text-foreground font-semibold leading-[0.95]">
+      <h1 className="display text-6xl md:text-8xl max-w-5xl text-depth leading-[1.05]">
         {title}
       </h1>
       {subtitle && (
-        <p className="mt-10 max-w-2xl text-xl text-slate leading-relaxed font-medium">
+        <p className="mt-12 max-w-2xl text-xl text-slate leading-relaxed font-ui">
           {subtitle}
         </p>
       )}
-      <div className="rule mt-20 opacity-50" />
+      <div className="rule-thin mt-20" />
     </section>
   );
 }

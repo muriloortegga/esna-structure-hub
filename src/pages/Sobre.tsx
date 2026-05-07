@@ -34,19 +34,19 @@ export default function Sobre() {
         title="Clareza, estrutura e execução."
         subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência técnica."
       />
-      <section className="container-x pb-48 space-y-40">
+      <section className="container-x pb-48 space-y-48">
         {blocks.map((b, i) => (
           <div key={b.eyebrow} className="grid md:grid-cols-12 gap-16 relative">
-            <div className="absolute -left-10 top-0 text-[100px] font-bold text-slate/[0.05] select-none">
+            <div className="absolute -left-12 -top-12 text-[140px] font-mono font-bold text-accent/[0.07] select-none pointer-events-none">
               0{i + 1}
             </div>
             <div className="md:col-span-5 relative z-10">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6 block">
+              <span className="earmark mb-8 block">
                 {b.eyebrow}
               </span>
-              <h2 className="display text-4xl md:text-5xl font-semibold leading-tight">{b.title}</h2>
+              <h2 className="display text-4xl md:text-6xl leading-[1.1] text-depth">{b.title}</h2>
             </div>
-            <div className="md:col-span-6 md:col-start-7 space-y-8 text-xl text-slate leading-relaxed font-medium">
+            <div className="md:col-span-6 md:col-start-7 space-y-8 text-xl text-slate leading-relaxed font-ui">
               {b.body.map((p) => <p key={p}>{p}</p>)}
             </div>
           </div>

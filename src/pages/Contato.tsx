@@ -39,63 +39,64 @@ export default function Contato() {
         subtitle="Inicie seu projeto com o suporte técnico de quem entende de integração. Respondemos em até um dia útil."
       />
       <section className="container-x pb-48 grid md:grid-cols-12 gap-16">
-        <form onSubmit={onSubmit} className="md:col-span-7 space-y-10">
+        <form onSubmit={onSubmit} className="md:col-span-7 space-y-12">
           {[
             { name: "nome", label: "Nome completo", type: "text" },
             { name: "empresa", label: "Empresa / Organização", type: "text" },
             { name: "email", label: "E-mail corporativo", type: "email" },
           ].map((f) => (
-            <div key={f.name} className="border-b-2 border-border pb-4 focus-within:border-teal transition-colors group">
-              <label className="block mb-3 text-[11px] uppercase tracking-[0.2em] font-bold text-slate group-focus-within:text-teal transition-colors">
-                {f.label}
+            <div key={f.name} className="border-b border-accent/20 pb-4 focus-within:border-accent transition-colors group">
+              <label className="block mb-4 text-[10px] font-mono uppercase tracking-[0.3em] font-bold text-slate group-focus-within:text-accent transition-colors">
+                ↳ {f.label}
               </label>
               <input
                 name={f.name}
                 type={f.type}
                 maxLength={255}
                 required
-                className="w-full bg-transparent outline-none text-2xl font-medium text-foreground placeholder:text-slate/30"
+                className="w-full bg-transparent outline-none text-3xl text-depth placeholder:text-slate/20 font-ui"
               />
             </div>
           ))}
-          <div className="border-b-2 border-border pb-4 focus-within:border-teal transition-colors group">
-            <label className="block mb-3 text-[11px] uppercase tracking-[0.2em] font-bold text-slate group-focus-within:text-teal transition-colors">
-              Mensagem / Descritivo do Desafio
+          <div className="border-b border-accent/20 pb-4 focus-within:border-accent transition-colors group">
+            <label className="block mb-4 text-[10px] font-mono uppercase tracking-[0.3em] font-bold text-slate group-focus-within:text-accent transition-colors">
+              ↳ Mensagem / Descritivo do Desafio
             </label>
             <textarea
               name="mensagem"
-              rows={5}
+              rows={4}
               maxLength={1000}
               required
-              className="w-full bg-transparent outline-none text-2xl font-medium text-foreground resize-none placeholder:text-slate/30"
+              className="w-full bg-transparent outline-none text-3xl text-depth resize-none placeholder:text-slate/20 font-ui"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-teal text-background font-bold uppercase text-sm tracking-[0.2em] hover:bg-ink transition-all duration-500 disabled:opacity-60 shadow-lg shadow-teal/5"
+            className="btn-primary w-full md:w-auto px-12"
           >
             {loading ? "Processando…" : "Enviar Mensagem"}
           </button>
         </form>
 
-        <aside className="md:col-span-4 md:col-start-9 space-y-12">
-          <div>
-            <ul className="space-y-6 text-sm font-bold uppercase tracking-widest text-slate">
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-teal transition-colors">
-                <Mail size={18} className="text-teal" /> contato@esna.eng.br
+        <aside className="md:col-span-4 md:col-start-9 space-y-16">
+          <div className="space-y-10">
+            <span className="earmark">Canais Diretos</span>
+            <ul className="space-y-8 font-mono text-[11px] uppercase tracking-[0.2em] text-slate">
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+                <Mail size={16} className="text-accent" /> leonardo.neres@esnaengenharia.com
               </li>
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-teal transition-colors">
-                <Phone size={18} className="text-teal" /> +55 (00) 0000-0000
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+                <Phone size={16} className="text-accent" /> (13) 98123-6332
               </li>
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-teal transition-colors">
-                <MapPin size={18} className="text-teal" /> Brasil
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+                <MapPin size={16} className="text-accent" /> Santos — São Paulo — Brasil
               </li>
             </ul>
           </div>
-          <div className="bg-slate/5 border border-border p-8 md:p-10 space-y-4">
-            <p className="display text-2xl font-semibold">Atendimento técnico</p>
-            <p className="text-slate font-medium leading-relaxed">
+          <div className="bg-pale/30 border border-accent/10 p-10 space-y-6">
+            <p className="display text-3xl text-depth">Atendimento técnico</p>
+            <p className="text-slate font-ui leading-relaxed">
               Para projetos em andamento, encaminhe diretamente ao time responsável pelo escopo contratado para agilizar o suporte.
             </p>
           </div>

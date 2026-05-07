@@ -30,20 +30,20 @@ export default function Header() {
       }`}
     >
       <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="display text-2xl tracking-tight text-foreground">esna</span>
-          <span className="hidden md:inline text-[10px] uppercase tracking-[0.3em] text-slate mt-1">
-            Engenharia
+        <Link to="/" className="flex items-center gap-3 group">
+          <span className="display text-3xl tracking-tight text-depth">ESNA</span>
+          <span className="hidden md:inline text-[9px] font-mono uppercase tracking-[0.4em] text-slate mt-1.5 border-l border-accent/30 pl-3">
+            Engenharia Integrada
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-12">
           {links.map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
               className={({ isActive }) =>
-                `text-[13px] uppercase tracking-[0.15em] font-medium transition-colors ${
-                  isActive ? "text-teal" : "text-slate hover:text-foreground"
+                `text-[11px] font-mono uppercase tracking-[0.25em] transition-all duration-300 ${
+                  isActive ? "text-primary font-bold" : "text-slate hover:text-primary"
                 }`
               }
             >
@@ -53,7 +53,7 @@ export default function Header() {
         </nav>
         <Link
           to="/contato"
-          className="hidden md:inline-flex text-[13px] uppercase tracking-wider font-semibold items-center gap-2 px-6 py-3 bg-teal text-background hover:bg-ink transition-colors duration-300"
+          className="hidden md:inline-flex btn-primary"
         >
           Fale com a ESNA
         </Link>

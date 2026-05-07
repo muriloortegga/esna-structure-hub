@@ -8,6 +8,7 @@ const Index = () => {
   return (
     <Layout>
       {/* HERO */}
+      {/* HERO */}
       <section className="relative -mt-16 md:-mt-20 min-h-[100svh] flex flex-col">
         <div className="absolute inset-0 -z-10">
           <img
@@ -17,46 +18,46 @@ const Index = () => {
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/50 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white" />
         </div>
 
         <div className="container-x flex-1 flex flex-col justify-end pb-20 md:pb-28 pt-32">
-          <span className="text-[11px] uppercase tracking-[0.4em] text-teal font-bold mb-8 animate-fade-in">
-            Soluções Integradas de Engenharia
+          <span className="earmark mb-8 animate-fade-in">
+            Engenharia Integrada
           </span>
-          <h1 className="display text-[48px] sm:text-7xl md:text-[110px] max-w-6xl leading-[0.9] font-semibold text-foreground">
-            Engenharia que estrutura o <span className="text-teal italic">futuro</span>.
+          <h1 className="display text-[52px] sm:text-7xl md:text-[110px] max-w-6xl leading-[1.0] text-depth">
+            Precisão que sustenta <span className="text-accent italic">grandes operações</span>.
           </h1>
-          <p className="mt-12 max-w-xl text-xl text-slate leading-relaxed font-medium">
-            Projetamos, estruturamos e executamos sistemas complexos com clareza absoluta e precisão técnica.
+          <p className="mt-12 max-w-2xl text-xl text-slate leading-relaxed font-ui">
+            Projetamos, estruturamos e executamos sistemas complexos com clareza absoluta e domínio técnico comprovado.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <Link
               to="/solucoes"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-teal text-background font-bold uppercase text-xs tracking-widest hover:bg-ink transition-all duration-300"
+              className="btn-primary flex items-center gap-3"
             >
               Nossas soluções <ArrowRight size={14} />
             </Link>
             <Link
               to="/projetos"
-              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-ink text-ink font-bold uppercase text-xs tracking-widest hover:bg-ink hover:text-background transition-all duration-300"
+              className="inline-flex items-center gap-3 px-8 py-3 border border-depth text-depth font-mono text-xs uppercase tracking-widest hover:bg-depth hover:text-white transition-all duration-300"
             >
               Ver portfólio
             </Link>
           </div>
         </div>
 
-        <div className="container-x pb-12 grid grid-cols-3 gap-12 border-t border-border pt-8 text-[10px] uppercase tracking-[0.3em] font-bold text-slate">
+        <div className="container-x pb-12 grid grid-cols-3 gap-12 border-t border-accent/20 pt-8 text-[10px] font-mono uppercase tracking-[0.3em] font-bold text-slate">
           <div className="flex flex-col gap-1">
-            <span className="text-teal opacity-50">01</span>
+            <span className="text-accent">↳ 01</span>
             <span>Elétrica</span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-teal opacity-50">02</span>
+            <span className="text-accent">↳ 02</span>
             <span>Automação</span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-teal opacity-50">03</span>
+            <span className="text-accent">↳ 03</span>
             <span>Integração</span>
           </div>
         </div>
@@ -64,46 +65,45 @@ const Index = () => {
 
       {/* POSICIONAMENTO */}
       <section className="container-x py-32 md:py-48 relative overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20vw] font-bold text-slate/[0.03] select-none pointer-events-none leading-none tracking-tighter">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20vw] font-display text-depth/[0.02] select-none pointer-events-none leading-none tracking-tighter">
           ESNA
         </div>
         <div className="grid md:grid-cols-12 gap-16 relative z-10">
-          <div className="md:col-span-6">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6 block">Nosso Posicionamento</span>
-            <h2 className="display text-5xl md:text-7xl font-semibold leading-[0.95]">
-              Estrutura para resolver com <span className="text-teal">eficiência máxima</span>.
+          <div className="md:col-span-7">
+            <span className="earmark mb-8 block">Sobre a ESNA</span>
+            <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth">
+              Uma empresa preparada para <span className="text-accent">grandes desafios</span>.
             </h2>
           </div>
-          <div className="md:col-span-5 md:col-start-8 flex flex-col justify-end space-y-8 text-xl text-slate leading-relaxed font-medium">
+          <div className="md:col-span-5 flex flex-col justify-end space-y-8 text-xl text-slate leading-relaxed font-ui">
             <p>
-              A ESNA atua na interseção entre diferentes disciplinas da engenharia, organizando
-              processos complexos em soluções claras, funcionais e executáveis.
+              Atuamos com uma abordagem sistêmica, onde cada disciplina da engenharia é integrada
+              em uma única operação estruturada e previsível.
             </p>
-            <p className="text-ink border-l-2 border-teal pl-8 py-2">
-              Não entregamos apenas partes. <span className="italic font-bold">Entregamos sistemas.</span>
+            <p className="text-depth border-l border-accent pl-8 py-2 italic">
+              Não executamos apenas tarefas avulsas. <span className="font-bold not-italic">Entregamos estrutura.</span>
             </p>
           </div>
         </div>
       </section>
+iv>
+      </section>
 
       {/* PILARES */}
-      <section className="bg-slate/5 border-y border-border">
+      <section className="bg-pale/30 border-y border-accent/10">
         <div className="container-x py-24 md:py-32">
-          <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+          <div className="grid md:grid-cols-3 gap-px bg-accent/20 border border-accent/20">
             {[
-              { icon: Layers, t: "Transparência", d: "Clareza total em cada etapa do processo executivo." },
-              { icon: Boxes, t: "Estrutura", d: "Método proprietário, organização e base técnica sólida." },
-              { icon: Lightbulb, t: "Criatividade", d: "Soluções inteligentes para os desafios mais complexos." },
+              { icon: Layers, t: "Transparência", d: "Processos objetivos, comunicação direta e previsibilidade total." },
+              { icon: Boxes, t: "Estrutura", d: "Método proprietário, organização e base sólida para grandes operações." },
+              { icon: Lightbulb, t: "Integração", d: "Conectamos múltiplas disciplinas em uma única unidade de entrega." },
             ].map((p) => (
-              <div key={p.t} className="bg-background p-12 md:p-16 group transition-colors hover:bg-mint/10">
-                <p.icon className="w-8 h-8 text-teal mb-12 transition-transform duration-500 group-hover:-translate-y-2" />
-                <h3 className="display text-3xl font-semibold mb-5">{p.t}</h3>
-                <p className="text-slate font-medium leading-relaxed">{p.d}</p>
+              <div key={p.t} className="bg-background p-12 md:p-16 group transition-colors hover:bg-pale/20">
+                <p.icon className="w-8 h-8 text-accent mb-12 transition-transform duration-500 group-hover:-translate-y-2" />
+                <h3 className="display text-3xl mb-5 text-depth">{p.t}</h3>
+                <p className="text-slate font-ui leading-relaxed">{p.d}</p>
               </div>
             ))}
-          </div>
-          <div className="mt-16 flex items-baseline gap-4">
-            <span className="display text-4xl md:text-5xl font-bold italic text-teal">Integração Pragmática.</span>
           </div>
         </div>
       </section>
@@ -112,27 +112,27 @@ const Index = () => {
       <section className="container-x py-32 md:py-48">
         <div className="flex items-end justify-between mb-20 flex-wrap gap-8">
           <div className="max-w-2xl">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6 block">Expertise Técnica</span>
-            <h2 className="display text-5xl md:text-7xl font-semibold leading-[0.95]">
-              Soluções integradas de engenharia
+            <span className="earmark mb-8 block">Expertise Técnica</span>
+            <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth">
+              Execução com método em cada disciplina.
             </h2>
           </div>
-          <Link to="/solucoes" className="text-[13px] uppercase tracking-widest font-bold border-b-2 border-teal pb-1 hover:text-teal transition-colors">
+          <Link to="/solucoes" className="font-mono text-[11px] uppercase tracking-widest font-bold border-b border-accent pb-1 text-depth hover:text-accent transition-colors">
             Ver todas as soluções
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
+        <div className="grid md:grid-cols-2 gap-px bg-accent/20 border border-accent/20">
           {[
-            { icon: Zap, t: "Engenharia elétrica", d: "Projetos e execução de sistemas elétricos com foco em segurança máxima e conformidade." },
-            { icon: Cpu, t: "Automação e sistemas", d: "Integração tecnológica para otimização e controle inteligente de operações industriais." },
-            { icon: FileText, t: "Projetos e execução", d: "Planejamento detalhado para clareza, viabilidade técnica e eficiência produtiva." },
-            { icon: Network, t: "Integração de disciplinas", d: "Coordenação estratégica entre áreas para soluções completas e funcionais." },
+            { icon: Zap, t: "Engenharia elétrica", d: "Projetos e execução de sistemas elétricos industriais com rigor técnico absoluto." },
+            { icon: Cpu, t: "Automação e Robótica", d: "Integração tecnológica avançada para otimização e controle de plantas industriais." },
+            { icon: FileText, t: "Civil & Manutenção", d: "Infraestruturas resilientes e manutenção predial com foco em alta performance." },
+            { icon: Network, t: "Gestão & Dados", d: "Inteligência operacional e governança integrada de ativos e facilities." },
           ].map((s) => (
-            <div key={s.t} className="bg-background p-12 md:p-16 flex flex-col gap-8 hover:bg-slate/5 transition-colors group">
-              <s.icon className="w-8 h-8 text-teal group-hover:scale-110 transition-transform duration-500" />
+            <div key={s.t} className="bg-background p-12 md:p-16 flex flex-col gap-8 hover:bg-pale/10 transition-colors group">
+              <s.icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform duration-500" />
               <div className="space-y-4">
-                <h3 className="display text-3xl font-semibold">{s.t}</h3>
-                <p className="text-slate text-lg font-medium leading-relaxed">{s.d}</p>
+                <h3 className="display text-3xl text-depth">{s.t}</h3>
+                <p className="text-slate text-lg font-ui leading-relaxed">{s.d}</p>
               </div>
             </div>
           ))}
@@ -140,43 +140,44 @@ const Index = () => {
       </section>
 
       {/* PROJETOS */}
+      {/* PROJETOS */}
       <section className="container-x py-32 md:py-48">
-        <div className="flex items-end justify-between mb-20 flex-wrap gap-8">
+        <div className="flex items-end justify-between mb-24 flex-wrap gap-8">
           <div className="max-w-2xl">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-teal font-bold mb-6 block">Projetos Recentes</span>
-            <h2 className="display text-5xl md:text-7xl font-semibold leading-[0.95]">
-              Portfólio em evidência
+            <span className="earmark mb-8 block">Portfólio</span>
+            <h2 className="display text-5xl md:text-7xl leading-[1.05] text-depth">
+              Experiência real. Entrega comprovada.
             </h2>
           </div>
-          <Link to="/projetos" className="text-[13px] uppercase tracking-widest font-bold border-b-2 border-teal pb-1 hover:text-teal transition-colors">
+          <Link to="/projetos" className="font-mono text-[11px] uppercase tracking-widest font-bold border-b border-accent pb-1 text-depth hover:text-accent transition-colors">
             Acessar portfólio completo
           </Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-24">
           {projects.slice(0, 4).map((p, i) => (
             <Link
               to={`/projetos/${p.slug}`}
               key={p.slug}
               className={`group block ${i % 2 === 1 ? "md:mt-32" : ""}`}
             >
-              <div className="overflow-hidden bg-slate/10 aspect-[4/3] relative">
+              <div className="overflow-hidden bg-pale aspect-[4/3] relative border border-accent/10">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
                   width={1200}
                   height={900}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-depth/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="mt-8 flex items-center justify-between border-b border-border pb-6">
-                <h3 className="display text-3xl font-semibold">{p.name}</h3>
+              <div className="mt-8 flex items-center justify-between border-b border-accent/20 pb-6">
+                <h3 className="display text-3xl text-depth">{p.name}</h3>
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-slate font-bold">
-                    {p.type}
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate font-bold">
+                    ↳ {p.type}
                   </span>
-                  <ArrowRight size={16} className="text-teal transition-transform group-hover:translate-x-1" />
+                  <ArrowRight size={16} className="text-accent transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </Link>
@@ -184,26 +185,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SOBRE - LIGHT VERSION */}
-      <section className="bg-ink text-background relative overflow-hidden">
+      {/* SOBRE - BRANDED VERSION */}
+      <section className="bg-depth text-white relative overflow-hidden">
         <div className="container-x py-32 md:py-48 grid md:grid-cols-12 gap-16 items-center">
-          <div className="md:col-span-6">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-mint font-bold mb-8 block">Nossa Missão</span>
-            <h2 className="display text-5xl md:text-7xl font-semibold leading-[0.95]">
-              Uma operação estruturada para entregar <span className="text-mint">consistência</span>.
+          <div className="md:col-span-7">
+            <span className="earmark mb-8 block !text-mint">Nossa Missão</span>
+            <h2 className="display text-5xl md:text-7xl leading-[1.05]">
+              Sustentando grandes operações com <span className="text-mint italic">domínio técnico</span>.
             </h2>
           </div>
-          <div className="md:col-span-5 md:col-start-8 space-y-8 text-xl text-background/70 leading-relaxed font-medium">
+          <div className="md:col-span-5 flex flex-col space-y-10 text-xl text-white/70 leading-relaxed font-ui">
             <p>
-              A ESNA é uma empresa de engenharia que atua com foco em organização, clareza e
-              execução de alto nível em todo o território nacional.
+              A ESNA é uma empresa brasileira de engenharia integrada que atua com soluções completas para a indústria.
             </p>
             <p>
-              Nossa abordagem integra diferentes áreas para garantir eficiência, previsibilidade e
-              qualidade inquestionável em cada entrega.
+              Com abordagem sistêmica e domínio técnico comprovado, atendemos demandas complexas que exigem método, organização e execução confiável.
             </p>
-            <Link to="/sobre" className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-mint group">
-              Conheça a ESNA <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+            <Link to="/sobre" className="inline-flex items-center gap-4 text-xs font-mono font-bold uppercase tracking-[0.3em] text-mint group transition-colors hover:text-white">
+              ↳ Conheça a ESNA <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -211,19 +210,19 @@ const Index = () => {
 
       {/* CTA FINAL */}
       <section className="container-x py-40 md:py-60 text-center relative">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        <span className="text-[11px] uppercase tracking-[0.4em] text-teal font-bold mb-10 block">Próximos Passos</span>
-        <h2 className="display text-6xl md:text-[100px] max-w-5xl mx-auto leading-[0.9] font-semibold text-foreground">
-          Vamos estruturar seu <span className="italic text-teal">próximo projeto</span>.
+        <div className="rule-thin absolute top-0 left-0" />
+        <span className="earmark mb-10 inline-flex">Próximos Passos</span>
+        <h2 className="display text-6xl md:text-[100px] max-w-5xl mx-auto leading-[1.0] text-depth">
+          Vamos estruturar seu <span className="italic text-accent">próximo projeto</span>.
         </h2>
-        <div className="mt-16 flex flex-col items-center gap-8">
+        <div className="mt-20 flex flex-col items-center gap-10">
           <Link
             to="/contato"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-teal text-background font-bold uppercase text-sm tracking-[0.2em] hover:bg-ink transition-all duration-500 shadow-xl shadow-teal/10"
+            className="btn-primary flex items-center gap-4 px-12 py-5"
           >
-            Entrar em contato <ArrowRight size={18} />
+            Solicitar proposta <ArrowRight size={18} />
           </Link>
-          <p className="text-slate font-medium text-sm">Respostas técnicas em até 24 horas.</p>
+          <p className="text-slate font-mono text-[10px] uppercase tracking-widest">Respostas técnicas em até 24 horas.</p>
         </div>
       </section>
     </Layout>
