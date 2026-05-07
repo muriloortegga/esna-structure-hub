@@ -43,6 +43,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        sans: ['Calibri', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
         display: ['Georgia', 'serif'],
         ui: ['Calibri', 'system-ui', 'sans-serif'],
         mono: ['Courier New', 'monospace'],

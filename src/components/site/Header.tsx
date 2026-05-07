@@ -25,16 +25,23 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-700 ${
+        scrolled 
+          ? "bg-white/70 backdrop-blur-2xl border-b border-accent/20 shadow-sm" 
+          : "bg-transparent"
       }`}
     >
-      <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <span className="display text-3xl tracking-[0.2em] text-depth">ESNA</span>
-          <span className="hidden md:inline text-[9px] font-mono uppercase tracking-[0.4em] text-slate mt-1.5 border-l border-accent/30 pl-3">
-            Engenharia Integrada
-          </span>
+      <div className="container-x flex items-center justify-between h-20 md:h-28 transition-all duration-700">
+        <Link to="/" className="flex flex-col gap-0 group">
+          <div className="flex items-center gap-3">
+            <span className="display text-4xl md:text-5xl tracking-[0.4em] text-depth">ESNA</span>
+          </div>
+          <div className="flex items-center gap-2 mt-2">
+            <div className="h-px w-8 bg-accent/40" />
+            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-slate">
+              Engenharia Integrada
+            </span>
+          </div>
         </Link>
         <nav className="hidden md:flex items-center gap-12">
           {links.map((l) => (
@@ -42,29 +49,38 @@ export default function Header() {
               key={l.to}
               to={l.to}
               className={({ isActive }) =>
-                `text-[11px] font-mono uppercase tracking-[0.25em] transition-all duration-300 ${
-                  isActive ? "text-primary font-bold" : "text-slate hover:text-primary"
+                `text-[11px] font-mono uppercase tracking-[0.25em] transition-all duration-300 relative group/link ${
+                  isActive ? "text-depth font-bold" : "text-slate hover:text-depth"
                 }`
               }
             >
-              {l.label}
+              {({ isActive }) => (
+                <>
+                  {l.label}
+                  <span className={`absolute -bottom-2 left-0 h-0.5 bg-accent transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover/link:w-full"}`} />
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
-        <Link
-          to="/contato"
-          className="hidden md:inline-flex btn-primary"
-        >
-          Fale com a ESNA
-        </Link>
-        <button
-          aria-label="Menu"
-          onClick={() => setOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 text-depth"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/contato"
+            className="hidden md:inline-flex btn-primary !py-4"
+          >
+            Fale com a ESNA
+          </Link>
+          <button
+            aria-label="Menu"
+            onClick={() => setOpen((o) => !o)}
+            className="md:hidden p-2 -mr-2 text-depth"
+          >
+            {open ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
+      {/* Accent line that appears when scrolled */}
+      <div className={`h-px w-full bg-accent/30 transition-opacity duration-700 ${scrolled ? "opacity-100" : "opacity-0"}`} />
 
       {open && (
         <div className="md:hidden border-t border-accent/10 bg-background h-[calc(100vh-64px)]">

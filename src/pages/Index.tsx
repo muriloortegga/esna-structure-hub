@@ -21,46 +21,63 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white" />
         </div>
 
-        <div className="container-x flex-1 flex flex-col justify-end pb-20 md:pb-28 pt-32">
-          <span className="earmark mb-8 animate-fade-in">
-            Engenharia Integrada
-          </span>
-          <h1 className="display text-[52px] sm:text-7xl md:text-[110px] max-w-6xl leading-[1.0] text-depth">
-            Precisão que sustenta <span className="text-accent italic">grandes operações</span>.
+        <div className="container-x flex-1 flex flex-col justify-end pb-20 md:pb-32 pt-40 relative z-10">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px w-12 bg-accent" />
+            <span className="font-mono text-[11px] uppercase tracking-[0.5em] text-accent font-bold">
+              ↳ Engenharia Integrada
+            </span>
+          </div>
+          <h1 className="display text-[60px] sm:text-8xl md:text-[140px] max-w-6xl leading-[0.9] text-depth tracking-tight">
+            ESNA
           </h1>
-          <p className="mt-12 max-w-2xl text-xl text-slate leading-relaxed font-ui">
-            Projetamos, estruturamos e executamos sistemas complexos com clareza absoluta e domínio técnico comprovado.
-          </p>
-          <div className="mt-12 flex flex-wrap gap-4">
-            <Link
-              to="/solucoes"
-              className="btn-primary flex items-center gap-3"
-            >
-              Nossas soluções <ArrowRight size={14} />
-            </Link>
-            <Link
-              to="/projetos"
-              className="inline-flex items-center gap-3 px-8 py-3 border border-depth text-depth font-mono text-xs uppercase tracking-widest hover:bg-depth hover:text-white transition-all duration-300"
-            >
-              Ver portfólio
-            </Link>
+          <div className="mt-8 flex flex-col md:flex-row md:items-end justify-between gap-12">
+            <div className="max-w-2xl">
+              <p className="text-2xl md:text-3xl text-depth leading-tight font-display italic">
+                Precisão que sustenta <span className="text-accent not-italic">grandes operações</span>.
+              </p>
+              <p className="mt-8 text-xl text-slate leading-relaxed font-ui max-w-xl">
+                Projetamos, estruturamos e executamos sistemas complexos com clareza absoluta e domínio técnico comprovado.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4 mb-2">
+              <Link
+                to="/solucoes"
+                className="btn-primary px-10 py-5"
+              >
+                Nossas soluções
+              </Link>
+              <Link
+                to="/projetos"
+                className="inline-flex items-center gap-3 px-10 py-5 border border-depth text-depth font-mono text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-depth hover:text-white transition-all duration-500"
+              >
+                Portfólio ↳
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="container-x pb-12 grid grid-cols-3 gap-12 border-t border-accent/20 pt-8 text-[10px] font-mono uppercase tracking-[0.3em] font-bold text-slate">
-          <div className="flex flex-col gap-1">
-            <span className="text-accent">↳ 01</span>
-            <span>Elétrica</span>
+        <div className="container-x pb-12 grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-accent/20 pt-10">
+          <div className="flex flex-col gap-2">
+            <span className="text-accent font-mono text-xs font-bold">↳ 01</span>
+            <span className="font-display text-xl text-depth">Engenharia Elétrica</span>
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-accent">↳ 02</span>
-            <span>Automação</span>
+          <div className="flex flex-col gap-2">
+            <span className="text-accent font-mono text-xs font-bold">↳ 02</span>
+            <span className="font-display text-xl text-depth">Automação & Robótica</span>
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-accent">↳ 03</span>
-            <span>Integração</span>
+          <div className="flex flex-col gap-2">
+            <span className="text-accent font-mono text-xs font-bold">↳ 03</span>
+            <span className="font-display text-xl text-depth">Infraestrutura</span>
           </div>
-        </div      {/* POSICIONAMENTO & STATS */}
+          <div className="flex flex-col gap-2">
+            <span className="text-accent font-mono text-xs font-bold">↳ 04</span>
+            <span className="font-display text-xl text-depth">Gestão de Ativos</span>
+          </div>
+        </div>
+      </section>
+
+      {/* POSICIONAMENTO & STATS */}
       <section className="container-x py-32 md:py-48 relative overflow-hidden">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20vw] font-display text-depth/[0.02] select-none pointer-events-none leading-none tracking-tighter">
           ESNA
