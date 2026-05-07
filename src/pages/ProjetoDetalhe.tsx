@@ -68,7 +68,7 @@ export default function ProjetoDetalhe() {
 
         <div className="mt-40 border-t border-accent/10 pt-16 flex justify-between items-center">
           <div className="space-y-2">
-            <span className="earmark block">Projetos</span>
+
             <span className="display text-3xl md:text-5xl text-foreground">Explorar mais.</span>
           </div>
           <Link to="/projetos" className="btn-primary inline-flex items-center gap-3">

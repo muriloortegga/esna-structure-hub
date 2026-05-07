@@ -34,7 +34,6 @@ export default function Contato() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Contato"
         title="Fale com a ESNA."
         subtitle="Inicie seu projeto com o suporte técnico de quem entende de integração. Respondemos em até um dia útil."
       />

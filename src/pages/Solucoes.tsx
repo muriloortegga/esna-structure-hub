@@ -46,7 +46,6 @@ export default function Solucoes() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Nossas Frentes"
         title="Quatro unidades. Um ecossistema."
         subtitle="Organizamos nossa expertise em frentes integradas para garantir entrega técnica absoluta em cada disciplina."
       />
@@ -86,7 +85,7 @@ export default function Solucoes() {
       {/* CTA SECTION */}
       <section className="section-void section-padding">
         <div className="container-x text-center flex flex-col items-center gap-10">
-          <span className="text-caption text-gray-500">Pronto para Integrar?</span>
+
           <h2 className="text-display text-white max-w-3xl">
             Sua operação merece uma <span className="text-gray-400 italic">Estrutura de Engenharia</span> de alto nível.
           </h2>

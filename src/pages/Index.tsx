@@ -20,9 +20,7 @@ const Index = () => {
 
         <div className="container-x relative z-10 pt-20">
           <div className="flex flex-col gap-6 max-w-4xl">
-            <span className="text-caption text-gray-400 animate-reveal">
-              Engenharia Integrada // Soluções de Alta Precisão
-            </span>
+
             <h1 className="text-display text-white animate-reveal [animation-delay:200ms]">
               Construindo a Infraestrutura que Sustenta <span className="text-gray-400 italic">Grandes Operações</span>.
             </h1>
@@ -61,7 +59,7 @@ const Index = () => {
         <div className="container-x grid md:grid-cols-2 gap-20 items-center">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <span className="text-caption text-gray-500">Sobre a ESNA</span>
+
               <h2 className="text-display text-void leading-tight">
                 Engenharia como sistema de governança.
               </h2>
@@ -94,7 +92,7 @@ const Index = () => {
         <div className="container-x">
           <div className="flex items-end justify-between mb-16 gap-8">
             <div className="flex flex-col gap-4">
-              <span className="text-caption text-gray-500">Expertise Técnica</span>
+
               <h2 className="text-display text-void">Soluções que Escalam.</h2>
             </div>
             <Link to="/solucoes" className="btn-palantir-arrow">Ver todas as frentes →</Link>
@@ -125,7 +123,7 @@ const Index = () => {
       <section className="section-white section-padding">
         <div className="container-x">
           <div className="flex flex-col gap-4 mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-caption text-gray-500">Portfólio de Impacto</span>
+
             <h2 className="text-display text-void">Resultados Reais.</h2>
           </div>
 
@@ -168,7 +166,7 @@ const Index = () => {
       {/* CTA FINAL */}
       <section className="section-void section-padding text-center">
         <div className="container-x flex flex-col items-center gap-10">
-          <span className="text-caption text-gray-500">Próximos Passos</span>
+
           <h2 className="text-display text-white max-w-4xl">
             Pronto para reconstruir sua <span className="text-gray-400 italic">Vantagem Operacional</span>?
           </h2>

@@ -30,7 +30,6 @@ export default function Sobre() {
   return (
     <Layout>
       <PageHero
-        eyebrow="A Empresa"
         title="Clareza, estrutura e execução."
         subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência técnica."
       />
@@ -39,7 +38,7 @@ export default function Sobre() {
       <section className="section-white section-padding">
         <div className="container-x grid md:grid-cols-2 gap-20 items-start">
           <div className="flex flex-col gap-6">
-            <span className="text-caption text-gray-500">História & Fundação</span>
+
             <h2 className="text-display text-void leading-tight">Engenharia para projetos integrados.</h2>
           </div>
           <div className="flex flex-col gap-8 text-body text-gray-600">
@@ -72,7 +71,7 @@ export default function Sobre() {
           </div>
           <div className="flex flex-col gap-8">
             <div className="card-dark p-12 flex flex-col gap-6">
-              <span className="text-caption text-gray-400">Valores Essenciais</span>
+
               <ul className="flex flex-col gap-4 text-h2 text-white">
                 <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 bg-white rounded-full" />
