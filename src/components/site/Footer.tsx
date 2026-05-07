@@ -11,7 +11,6 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <p className="eyebrow mb-4">Navegação</p>
           <ul className="space-y-2 text-sm">
             <li><Link to="/sobre" className="link-underline">Sobre</Link></li>
             <li><Link to="/solucoes" className="link-underline">Soluções</Link></li>
@@ -20,7 +19,6 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="eyebrow mb-4">Contato</p>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>contato@esna.eng.br</li>
             <li>+55 (00) 0000-0000</li>

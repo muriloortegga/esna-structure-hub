@@ -30,7 +30,6 @@ export default function Sobre() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Sobre a ESNA"
         title="Clareza, estrutura e execução."
         subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência."
       />
@@ -38,7 +37,6 @@ export default function Sobre() {
         {blocks.map((b, i) => (
           <div key={b.eyebrow} className="grid md:grid-cols-12 gap-10">
             <div className="md:col-span-4">
-              <p className="eyebrow mb-4">0{i + 1} — {b.eyebrow}</p>
               <h2 className="display text-3xl md:text-4xl">{b.title}</h2>
             </div>
             <div className="md:col-span-7 md:col-start-6 space-y-5 text-lg text-muted-foreground leading-relaxed">

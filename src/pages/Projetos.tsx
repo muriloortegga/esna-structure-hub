@@ -7,7 +7,6 @@ export default function Projetos() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Portfólio"
         title="Experiência aplicada em projetos reais."
         subtitle="Cada projeto é resolvido como um sistema. Aqui estão alguns deles."
       />

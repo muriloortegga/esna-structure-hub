@@ -17,11 +17,10 @@ export default function ProjetoDetalhe() {
 
         <div className="mt-10 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7">
-            <p className="eyebrow mb-4">{project.type}</p>
             <h1 className="display text-4xl md:text-6xl">{project.name}</h1>
           </div>
           <div className="md:col-span-4 md:col-start-9 text-muted-foreground space-y-1 self-end text-sm">
-            {project.client && <div><span className="eyebrow block mb-1">Cliente</span>{project.client}</div>}
+            {project.client && <div>{project.client}</div>}
           </div>
         </div>
 
@@ -38,21 +37,17 @@ export default function ProjetoDetalhe() {
         <div className="mt-16 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7 space-y-12">
             <section>
-              <p className="eyebrow mb-3">Descrição</p>
               <p className="text-lg leading-relaxed">{project.description}</p>
             </section>
             <section>
-              <p className="eyebrow mb-3">Solução aplicada</p>
               <p className="text-lg leading-relaxed">{project.solution}</p>
             </section>
             <section>
-              <p className="eyebrow mb-3">Resultado</p>
               <p className="display text-2xl md:text-3xl">{project.result}</p>
             </section>
           </div>
           <aside className="md:col-span-4 md:col-start-9">
             <div className="border border-border p-8">
-              <p className="eyebrow mb-4">Escopo</p>
               <ul className="space-y-3">
                 {project.scope.map((s) => (
                   <li key={s} className="flex gap-3 text-sm">

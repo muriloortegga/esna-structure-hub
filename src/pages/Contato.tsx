@@ -34,7 +34,6 @@ export default function Contato() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Contato"
         title="Fale com a ESNA."
         subtitle="Conte sobre seu projeto. Respondemos em até um dia útil."
       />
@@ -46,7 +45,7 @@ export default function Contato() {
             { name: "email", label: "E-mail", type: "email" },
           ].map((f) => (
             <div key={f.name} className="border-b border-border pb-3 focus-within:border-foreground transition-colors">
-              <label className="eyebrow block mb-2">{f.label}</label>
+              <label className="block mb-2 text-sm font-medium">{f.label}</label>
               <input
                 name={f.name}
                 type={f.type}
@@ -56,7 +55,7 @@ export default function Contato() {
             </div>
           ))}
           <div className="border-b border-border pb-3 focus-within:border-foreground transition-colors">
-            <label className="eyebrow block mb-2">Mensagem</label>
+            <label className="block mb-2 text-sm font-medium">Mensagem</label>
             <textarea
               name="mensagem"
               rows={5}
@@ -75,7 +74,6 @@ export default function Contato() {
 
         <aside className="md:col-span-4 md:col-start-9 space-y-8">
           <div>
-            <p className="eyebrow mb-4">Informações</p>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3"><Mail size={16} className="mt-0.5 text-ochre" /> contato@esna.eng.br</li>
               <li className="flex items-start gap-3"><Phone size={16} className="mt-0.5 text-ochre" /> +55 (00) 0000-0000</li>

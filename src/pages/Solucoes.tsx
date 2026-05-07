@@ -33,7 +33,6 @@ export default function Solucoes() {
   return (
     <Layout>
       <PageHero
-        eyebrow="Soluções"
         title="Soluções completas, executadas com precisão."
         subtitle="Quatro frentes integradas, uma única lógica: organizar a complexidade até a entrega."
       />
