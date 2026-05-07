@@ -54,7 +54,7 @@ export default function Contato() {
                 type={f.type}
                 maxLength={255}
                 required
-                className="w-full bg-transparent outline-none text-3xl text-depth placeholder:text-slate/20 font-ui"
+                className="w-full bg-transparent outline-none text-3xl text-foreground placeholder:text-slate/20 font-ui"
               />
             </div>
           ))}
@@ -67,7 +67,7 @@ export default function Contato() {
               rows={4}
               maxLength={1000}
               required
-              className="w-full bg-transparent outline-none text-3xl text-depth resize-none placeholder:text-slate/20 font-ui"
+              className="w-full bg-transparent outline-none text-3xl text-foreground resize-none placeholder:text-slate/20 font-ui"
             />
           </div>
           <button
@@ -83,19 +83,19 @@ export default function Contato() {
           <div className="space-y-10">
             <span className="earmark">Canais Diretos</span>
             <ul className="space-y-8 font-mono text-[11px] uppercase tracking-[0.2em] text-slate">
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-accent transition-colors">
                 <Mail size={16} className="text-accent" /> leonardo.neres@esnaengenharia.com
               </li>
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-accent transition-colors">
                 <Phone size={16} className="text-accent" /> (13) 98123-6332
               </li>
-              <li className="flex items-center gap-4 group cursor-pointer hover:text-primary transition-colors">
+              <li className="flex items-center gap-4 group cursor-pointer hover:text-accent transition-colors">
                 <MapPin size={16} className="text-accent" /> Santos — São Paulo — Brasil
               </li>
             </ul>
           </div>
-          <div className="bg-pale/30 border border-accent/10 p-10 space-y-6">
-            <p className="display text-3xl text-depth">Atendimento técnico</p>
+          <div className="bg-surf2 border border-accent/10 p-10 space-y-6">
+            <p className="display text-3xl text-foreground">Atendimento técnico</p>
             <p className="text-slate font-ui leading-relaxed">
               Para projetos em andamento, encaminhe diretamente ao time responsável pelo escopo contratado para agilizar o suporte.
             </p>

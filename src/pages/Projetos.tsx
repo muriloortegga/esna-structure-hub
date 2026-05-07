@@ -19,7 +19,7 @@ export default function Projetos() {
               to={`/projetos/${p.slug}`}
               className={`group block ${i % 2 === 1 ? "md:mt-32" : ""}`}
             >
-              <div className="aspect-[4/3] overflow-hidden bg-slate/10 relative">
+              <div className="aspect-[4/3] overflow-hidden bg-surf2 relative border border-accent/10">
                 <img
                   src={p.cover}
                   alt={p.name}
@@ -28,15 +28,15 @@ export default function Projetos() {
                   height={900}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-depth/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="mt-8 flex items-center justify-between border-b border-border pb-6">
-                <h3 className="display text-3xl font-semibold">{p.name}</h3>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-teal font-bold">
-                  {p.type}
+              <div className="mt-8 flex items-center justify-between border-b border-accent/20 pb-6">
+                <h3 className="display text-3xl text-foreground">{p.name}</h3>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold font-mono">
+                  ↳ {p.type}
                 </span>
               </div>
-              <p className="mt-6 text-slate text-lg font-medium max-w-xl leading-relaxed">{p.description}</p>
+              <p className="mt-6 text-slate text-lg font-ui max-w-xl leading-relaxed">{p.description}</p>
             </Link>
           ))}
         </div>

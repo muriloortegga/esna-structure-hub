@@ -44,7 +44,7 @@ export default function Sobre() {
               <span className="earmark mb-8 block">
                 {b.eyebrow}
               </span>
-              <h2 className="display text-4xl md:text-6xl leading-[1.1] text-depth">{b.title}</h2>
+              <h2 className="display text-4xl md:text-6xl leading-[1.1] text-foreground">{b.title}</h2>
             </div>
             <div className="md:col-span-6 md:col-start-7 space-y-8 text-xl text-slate leading-relaxed font-ui">
               {b.body.map((p) => <p key={p}>{p}</p>)}
@@ -54,25 +54,25 @@ export default function Sobre() {
       </section>
 
       {/* MISSÃO & VISÃO */}
-      <section className="bg-depth text-white relative overflow-hidden">
+      <section className="bg-depth text-foreground relative overflow-hidden">
         <div className="absolute inset-0 pattern-stripes opacity-10 pointer-events-none" />
         <div className="container-x py-32 md:py-48">
-          <span className="earmark mb-8 block !text-mint">Missão & Visão</span>
+          <span className="earmark mb-8 block">Missão & Visão</span>
           <h2 className="display text-5xl md:text-7xl leading-[1.05] mb-20 max-w-4xl">
-            Satisfazer nossos clientes em seus <span className="text-mint italic">projetos</span>.
+            Satisfazer nossos clientes em seus <span className="text-accent italic">projetos</span>.
           </h2>
           <div className="grid md:grid-cols-2 gap-20">
             <div className="space-y-8">
-              <div className="rule-thin !bg-mint/40 w-24" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-mint font-bold block">Missão</span>
-              <p className="text-xl text-white/70 font-ui leading-relaxed">
+              <div className="rule-thin w-24" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent font-bold block">Missão</span>
+              <p className="text-xl text-foreground/70 font-ui leading-relaxed">
                 Conquistar a confiança dos nossos clientes diariamente — através do compromisso, da qualidade técnica e da capacidade de entregar soluções completas com método e precisão.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="rule-thin !bg-mint/40 w-24" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-mint font-bold block">Visão</span>
-              <p className="text-xl text-white/70 font-ui leading-relaxed">
+              <div className="rule-thin w-24" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent font-bold block">Visão</span>
+              <p className="text-xl text-foreground/70 font-ui leading-relaxed">
                 Ser reconhecida como a principal referência em engenharia integrada no Brasil, com padrão de excelência comparável às maiores consultorias globais do setor.
               </p>
             </div>

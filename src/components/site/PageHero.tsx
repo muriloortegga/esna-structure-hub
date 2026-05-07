@@ -11,7 +11,7 @@ export default function PageHero({ title, subtitle, eyebrow }: Props) {
           {eyebrow}
         </span>
       )}
-      <h1 className="display text-6xl md:text-8xl max-w-5xl text-depth leading-[1.05]">
+      <h1 className="display text-6xl md:text-8xl max-w-5xl text-foreground leading-[1.05]">
         {title}
       </h1>
       {subtitle && (
