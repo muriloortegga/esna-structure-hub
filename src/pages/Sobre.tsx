@@ -34,69 +34,82 @@ export default function Sobre() {
         title="Clareza, estrutura e execução."
         subtitle="Uma empresa de engenharia construída para entregar projetos complexos com método e consistência técnica."
       />
-      <section className="container-x pb-48 space-y-48 relative">
-        {blocks.map((b, i) => (
-          <div key={b.eyebrow} className="grid md:grid-cols-12 gap-16 relative">
-            <div className="absolute -left-12 -top-12 text-[140px] font-mono font-bold text-accent/[0.07] select-none pointer-events-none">
-              0{i + 1}
-            </div>
-            <div className="md:col-span-5 relative z-10">
-              <span className="earmark mb-8 block">
-                {b.eyebrow}
-              </span>
-              <h2 className="display text-4xl md:text-6xl leading-[1.1] text-foreground">{b.title}</h2>
-            </div>
-            <div className="md:col-span-6 md:col-start-7 space-y-8 text-xl text-slate leading-relaxed font-ui">
-              {b.body.map((p) => <p key={p}>{p}</p>)}
-            </div>
+      
+      {/* HISTORY DUPLEX */}
+      <section className="section-white section-padding">
+        <div className="container-x grid md:grid-cols-2 gap-20 items-start">
+          <div className="flex flex-col gap-6">
+            <span className="text-caption text-gray-500">História & Fundação</span>
+            <h2 className="text-display text-void leading-tight">Engenharia para projetos integrados.</h2>
           </div>
-        ))}
+          <div className="flex flex-col gap-8 text-body text-gray-600">
+            <p>
+              A ESNA é uma empresa de engenharia especializada em soluções integradas. Atuamos organizando e executando projetos que exigem precisão técnica, visão sistêmica e capacidade de coordenação entre múltiplas disciplinas.
+            </p>
+            <p>
+              Nosso trabalho parte da organização. Entendemos o projeto como um sistema — e estruturamos cada etapa para garantir eficiência, controle e qualidade absoluta em cada entrega industrial.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* MISSÃO & VISÃO */}
-      <section className="bg-depth text-foreground relative overflow-hidden">
-        <div className="absolute inset-0 pattern-stripes opacity-10 pointer-events-none" />
-        <div className="container-x py-32 md:py-48">
-          <span className="earmark mb-8 block">Missão & Visão</span>
-          <h2 className="display text-5xl md:text-7xl leading-[1.05] mb-20 max-w-4xl">
-            Satisfazer nossos clientes em seus <span className="text-accent italic">projetos</span>.
-          </h2>
-          <div className="grid md:grid-cols-2 gap-20">
-            <div className="space-y-8">
-              <div className="rule-thin w-24" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent font-bold block">Missão</span>
-              <p className="text-xl text-foreground/70 font-ui leading-relaxed">
+      {/* MISSION/VISION DUPLEX (SURFACE) */}
+      <section className="section-surface section-padding border-y border-border-sutil">
+        <div className="container-x grid md:grid-cols-2 gap-20">
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-6">
+              <span className="text-nav text-void border-l-2 border-void pl-4">Nossa Missão</span>
+              <p className="text-h2 text-gray-600 leading-relaxed">
                 Conquistar a confiança dos nossos clientes diariamente — através do compromisso, da qualidade técnica e da capacidade de entregar soluções completas com método e precisão.
               </p>
             </div>
-            <div className="space-y-8">
-              <div className="rule-thin w-24" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent font-bold block">Visão</span>
-              <p className="text-xl text-foreground/70 font-ui leading-relaxed">
+            <div className="flex flex-col gap-6">
+              <span className="text-nav text-void border-l-2 border-void pl-4">Nossa Visão</span>
+              <p className="text-h2 text-gray-600 leading-relaxed">
                 Ser reconhecida como a principal referência em engenharia integrada no Brasil, com padrão de excelência comparável às maiores consultorias globais do setor.
               </p>
             </div>
           </div>
+          <div className="flex flex-col gap-8">
+            <div className="card-dark p-12 flex flex-col gap-6">
+              <span className="text-caption text-gray-400">Valores Essenciais</span>
+              <ul className="flex flex-col gap-4 text-h2 text-white">
+                <li className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 bg-white rounded-full" />
+                  Transparência Radical
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 bg-white rounded-full" />
+                  Excelência Técnica
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 bg-white rounded-full" />
+                  Visão Sistêmica
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="h-1.5 w-1.5 bg-white rounded-full" />
+                  Compromisso com o Prazo
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* NÚMEROS */}
-      <section className="container-x py-32 md:py-48 grid grid-cols-2 md:grid-cols-4 gap-12">
-        <div className="stat-block">
-          <span className="stat-value">+10</span>
-          <span className="stat-label">Anos de atuação</span>
-        </div>
-        <div className="stat-block">
-          <span className="stat-value">9</span>
-          <span className="stat-label">Áreas integradas</span>
-        </div>
-        <div className="stat-block">
-          <span className="stat-value">+50</span>
-          <span className="stat-label">Projetos entregues</span>
-        </div>
-        <div className="stat-block">
-          <span className="stat-value">100%</span>
-          <span className="stat-label">Comprometimento</span>
+      {/* STATS (WHITE) */}
+      <section className="section-white section-padding">
+        <div className="container-x grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          {[
+            { v: "+10", l: "Anos de atuação" },
+            { v: "9", l: "Áreas integradas" },
+            { v: "+50", l: "Projetos entregues" },
+            { v: "100%", l: "Comprometimento" },
+          ].map((s) => (
+            <div key={s.l} className="flex flex-col gap-2">
+              <span className="text-display text-void font-bold">{s.v}</span>
+              <span className="text-caption text-gray-500">{s.l}</span>
+            </div>
+          ))}
         </div>
       </section>
     </Layout>

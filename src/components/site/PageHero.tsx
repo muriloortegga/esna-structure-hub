@@ -5,29 +5,22 @@ interface Props {
 }
 export default function PageHero({ title, subtitle, eyebrow }: Props) {
   return (
-    <section className="container-x pt-32 md:pt-48 pb-16 md:pb-32 relative overflow-hidden">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 text-[20vw] font-display text-accent/[0.03] select-none pointer-events-none leading-none tracking-tighter">
-        ESNA
-      </div>
-      {eyebrow && (
-        <div className="flex items-center gap-4 mb-10">
-          <div className="h-px w-12 bg-accent" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.4em] text-accent font-bold">
-            ↳ {eyebrow}
+    <section className="section-padding bg-white overflow-hidden border-b border-border-sutil mt-[52px]">
+      <div className="container-x">
+        {eyebrow && (
+          <span className="text-caption text-gray-500 mb-8 block animate-reveal">
+            {eyebrow}
           </span>
-        </div>
-      )}
-      <h1 className="display text-6xl md:text-8xl max-w-5xl text-depth leading-[1.05]">
-        {title}
-      </h1>
-      {subtitle && (
-        <div className="mt-16 flex gap-8 items-start max-w-3xl">
-          <div className="h-12 w-px bg-accent/30 shrink-0 mt-2" />
-          <p className="text-xl md:text-2xl text-slate leading-relaxed font-ui">
+        )}
+        <h1 className="text-display text-void max-w-4xl animate-reveal [animation-delay:200ms]">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-8 text-h1 text-gray-500 max-w-3xl animate-reveal [animation-delay:400ms]">
             {subtitle}
           </p>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }

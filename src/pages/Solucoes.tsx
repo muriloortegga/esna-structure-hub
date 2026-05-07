@@ -51,44 +51,48 @@ export default function Solucoes() {
         subtitle="Organizamos nossa expertise em frentes integradas para garantir entrega técnica absoluta em cada disciplina."
       />
       
-      <section className="container-x pb-48">
-        <div className="space-y-32">
-          {units.map((u) => (
-            <div key={u.badge} className="grid md:grid-cols-12 gap-16 relative">
-              <div className="md:col-span-4 space-y-8">
-                <span className="earmark block">{u.badge}</span>
-                <h2 className="display text-4xl text-foreground leading-tight">{u.sub}</h2>
-                <p className="text-slate font-ui leading-relaxed">{u.desc}</p>
-                <div className="rule-thin w-24" />
+      {/* UNITS LIST */}
+      {units.map((u, i) => (
+        <section key={u.badge} className={`section-padding border-b border-border-sutil ${i % 2 === 0 ? "section-white" : "section-surface"}`}>
+          <div className="container-x">
+            <div className="grid md:grid-cols-12 gap-12 md:gap-20">
+              <div className="md:col-span-4 flex flex-col gap-6 sticky top-24 h-fit">
+                <span className="earmark-tag bg-void text-white self-start">{u.badge}</span>
+                <h2 className="text-display text-void">{u.sub}</h2>
+                <p className="text-body text-gray-600 leading-relaxed">
+                  {u.desc}
+                </p>
+                <div className="h-px w-24 bg-void/10 mt-4" />
               </div>
-              <div className="md:col-span-7 md:col-start-6 grid sm:grid-cols-2 gap-8">
+              
+              <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
                 {u.services.map((s) => (
-                  <div key={s.t} className="service-card group">
-                    <h3 className="display text-2xl text-foreground mb-4 group-hover:text-accent transition-colors">{s.t}</h3>
-                    <p className="text-sm text-slate font-ui leading-relaxed">{s.body}</p>
+                  <div key={s.t} className="card-surface group hover:bg-white transition-all">
+                    <div className="flex flex-col h-full">
+                      <h3 className="text-h1 text-void mb-6 group-hover:underline underline-offset-4 decoration-1">{s.t}</h3>
+                      <p className="text-body text-gray-500 mb-10 flex-grow">{s.body}</p>
+                      <span className="text-[11px] font-bold text-void uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                        Especificações Técnicas →
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* METODOLOGIA BREVE */}
-        <div className="mt-48 bg-depth text-foreground p-12 md:p-20 relative overflow-hidden">
-          <div className="absolute inset-0 pattern-rects opacity-10 pointer-events-none" />
-          <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="earmark mb-8 block">Nossa Entrega</span>
-              <h2 className="display text-4xl md:text-5xl leading-tight">Como garantimos a <span className="text-accent italic">integração</span>.</h2>
-            </div>
-            <div className="space-y-6 text-foreground/70 font-ui text-lg">
-              <p>Mapeamos interfaces, riscos e requisitos antes de qualquer proposta.</p>
-              <p>Operamos com equipes coordenadas como uma única unidade de entrega integrada.</p>
-              <Link to="/contato" className="btn-primary inline-flex mt-4">
-                Solicitar Diagnóstico Técnico
-              </Link>
-            </div>
           </div>
+        </section>
+      ))}
+
+      {/* CTA SECTION */}
+      <section className="section-void section-padding">
+        <div className="container-x text-center flex flex-col items-center gap-10">
+          <span className="text-caption text-gray-500">Pronto para Integrar?</span>
+          <h2 className="text-display text-white max-w-3xl">
+            Sua operação merece uma <span className="text-gray-400 italic">Estrutura de Engenharia</span> de alto nível.
+          </h2>
+          <Link to="/contato" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-12">
+            Solicitar Proposta Técnica
+          </Link>
         </div>
       </section>
     </Layout>

@@ -15,7 +15,7 @@ export default function Header() {
   const loc = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -24,68 +24,71 @@ export default function Header() {
   useEffect(() => setOpen(false), [loc.pathname]);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
-        }`}
-    >
-      <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <span className="display text-3xl tracking-[0.2em] text-depth">ESNA</span>
-          <span className="hidden md:inline text-[9px] font-mono uppercase tracking-[0.4em] text-slate mt-1.5 border-l border-accent/30 pl-3">
-            Engenharia Integrada
+    <div className="fixed top-0 inset-x-0 z-50">
+      {/* ANNOUNCEMENT BAR */}
+      {!scrolled && (
+        <div className="announcement-bar">
+          <span className="flex items-center gap-2">
+            <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded-sm text-[9px] font-bold">NEW</span>
+            ESNA 2025 — Construindo sistemas de engenharia integrados de alta performance →
           </span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-12">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                `text-[11px] font-mono uppercase tracking-[0.25em] transition-all duration-300 ${isActive ? "text-primary font-bold" : "text-slate hover:text-primary"
-                }`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {l.label}
-                  <span className={`absolute -bottom-2 left-0 h-0.5 bg-accent transition-all duration-500 ${isActive ? "w-full" : "w-0 group-hover/link:w-full"}`} />
-                </>
-              )}
-            </NavLink>
-          ))}
-        </nav>
-        <Link
-          to="/contato"
-          className="hidden md:inline-flex btn-primary"
-        >
-          Fale com a ESNA
-        </Link>
-        <button
-          aria-label="Menu"
-          onClick={() => setOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 text-depth"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      {/* Accent line that appears when scrolled */}
-      <div className={`h-px w-full bg-accent/30 transition-opacity duration-700 ${scrolled ? "opacity-100" : "opacity-0"}`} />
+        </div>
+      )}
 
-      {open && (
-        <div className="md:hidden border-t border-accent/10 bg-background h-[calc(100vh-64px)]">
-          <div className="container-x py-12 flex flex-col gap-8">
+      {/* NAV BAR */}
+      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md border-b border-border-sutil" : "bg-white"}`}>
+        <div className="container-x flex items-center justify-between h-[52px]">
+          <Link to="/" className="flex items-center gap-2 group">
+            <span className="font-sans font-bold text-[20px] tracking-tight text-void">ESNA</span>
+          </Link>
+          
+          <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
-              <NavLink key={l.to} to={l.to} className="text-4xl display text-foreground">
-                <span className="text-accent mr-4 font-mono text-xl">↳</span>
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  `text-nav transition-all duration-200 hover:text-void ${isActive ? "text-void font-medium" : "text-gray-500"}`
+                }
+              >
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/contato" className="btn-primary inline-flex self-start px-12 py-5 mt-10">
-              Solicitar proposta
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <Link
+              to="/contato"
+              className="hidden md:inline-flex btn-palantir-primary !py-2 !px-4 text-[11px]"
+            >
+              Falar com Especialista
+            </Link>
+            <button
+              aria-label="Menu"
+              onClick={() => setOpen((o) => !o)}
+              className="md:hidden p-2 text-void"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="md:hidden bg-white border-t border-border-sutil h-screen overflow-y-auto">
+          <div className="container-x py-10 flex flex-col gap-6">
+            {links.map((l) => (
+              <NavLink key={l.to} to={l.to} className="text-[24px] font-medium text-void">
+                {l.label}
+              </NavLink>
+            ))}
+            <Link to="/contato" className="btn-palantir-primary inline-flex self-start mt-4">
+              Falar com Especialista
             </Link>
           </div>
         </div>
       )}
-    </header>
+    </div>
   );
 }

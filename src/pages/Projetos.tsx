@@ -9,34 +9,39 @@ export default function Projetos() {
       <PageHero
         eyebrow="Portfólio"
         title="Experiência aplicada em projetos reais."
-        subtitle="Cada projeto é resolvido como um sistema técnico integrado. Aqui estão os marcos da nossa atuação."
+        subtitle="Cada projeto é resolvido como um sistema técnico integrado. Aqui estão os marcos da nossa atuação industrial."
       />
-      <section className="container-x pb-48">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-x-20 md:gap-y-32">
+      <section className="section-white section-padding">
+        <div className="container-x grid md:grid-cols-2 gap-16 md:gap-x-24 md:gap-y-40">
           {projects.map((p, i) => (
             <Link
               key={p.slug}
               to={`/projetos/${p.slug}`}
-              className={`group block ${i % 2 === 1 ? "md:mt-32" : ""}`}
+              className={`group flex flex-col gap-8 ${i % 2 === 1 ? "md:mt-48" : ""}`}
             >
-              <div className="aspect-[4/3] overflow-hidden bg-surf2 relative border border-accent/10">
+              <div className="card-surface p-0 overflow-hidden aspect-[16/10] bg-void">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
-                  width={1200}
-                  height={900}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                 />
-                <div className="absolute inset-0 bg-depth/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="mt-8 flex items-center justify-between border-b border-accent/20 pb-6">
-                <h3 className="display text-3xl text-foreground">{p.name}</h3>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold font-mono">
-                  ↳ {p.type}
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <span className="earmark-tag border border-void/10">{p.type}</span>
+                  <span className="text-caption text-gray-400">Impact Study // 2024</span>
+                </div>
+                <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
+                  {p.name}
+                </h3>
+                <p className="text-body text-gray-600 max-w-xl leading-relaxed">
+                  {p.description}
+                </p>
+                <span className="text-nav text-void mt-4 group-hover:translate-x-2 transition-transform">
+                  Ler Estudo de Impacto →
                 </span>
               </div>
-              <p className="mt-6 text-slate text-lg font-ui max-w-xl leading-relaxed">{p.description}</p>
             </Link>
           ))}
         </div>

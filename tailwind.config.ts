@@ -27,28 +27,30 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         // Design System Specific
-        depth: "hsl(var(--depth))",
-        mint: "hsl(var(--mint))",
-        pale: "hsl(var(--pale))",
-        void: "hsl(var(--void))",
-        surf2: "hsl(var(--surf2))",
-        slate: "hsl(var(--slate))",
+        // Design System Palantir.com
+        void: "#101010", // Preto total
+        surface: "#F7F7F7", // Cinza sutil alternante
+        highlight: "#1E2124", // Escuro suave
+        "border-sutil": "#D1D1D1",
+        "border-emphasis": "#101010",
         white: {
-          DEFAULT: "hsl(var(--white-uyuni))",
+          DEFAULT: "#FFFFFF",
           pure: "#FFFFFF"
         },
+        slate: "#7A8490",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        none: "0",
+        sm: "2px",
+        DEFAULT: "2px",
+        md: "4px",
+        lg: "6px",
       },
       fontFamily: {
-        sans: ['Calibri', 'system-ui', 'sans-serif'],
-        serif: ['Georgia', 'serif'],
-        display: ['Georgia', 'serif'],
-        ui: ['Calibri', 'system-ui', 'sans-serif'],
-        mono: ['Courier New', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        display: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        ui: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',
