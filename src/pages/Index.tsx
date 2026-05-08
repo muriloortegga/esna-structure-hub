@@ -253,17 +253,6 @@ const Index = () => {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>trar em contato
-            </Link>
-          </div>
-        </div>
-      </section>trar em contato
-            </Link>
-          </div>
-        </div>
-=======
->>>>>>> 835932a00c64e54ee06781e10c5c52b4e4c5a39b
       </section>
     </Layout>
   );

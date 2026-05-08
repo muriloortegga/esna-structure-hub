@@ -82,6 +82,5 @@ export default function ProjetoDetalhe() {
         </div>
       </article>
     </Layout>
-    </Layout>
   );
 }
