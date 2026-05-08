@@ -24,6 +24,9 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Clients list for ticker
+  const clients = ["Schuler", "Santander", "Petribu", "FVO", "Ypê", "Ambev", "BRF", "Gerdau"];
+
   return (
     <Layout>
       {/* HERO SECTION */}
@@ -83,10 +86,10 @@ const Index = () => {
             {/* Floating Units */}
             <div className="flex flex-wrap justify-center gap-4 animate-reveal [animation-delay:600ms]">
               {[
-                { label: "Energia", icon: Zap, link: "/solucoes" },
-                { label: "Automação", icon: Cpu, link: "/solucoes" },
-                { label: "Infra", icon: Building2, link: "/solucoes" },
-                { label: "Gestão", icon: BarChart, link: "/solucoes" },
+                { label: "Energia", icon: Zap, link: "/solucoes#energia" },
+                { label: "Automação", icon: Cpu, link: "/solucoes#automacao" },
+                { label: "Infra", icon: Building2, link: "/solucoes#infra" },
+                { label: "Gestão", icon: BarChart, link: "/solucoes#gestao" },
               ].map((s) => (
                 <Link 
                   key={s.label} 
@@ -102,6 +105,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FLOATING CLIENTS TICKER */}
+      <div className="w-full overflow-hidden bg-white py-12 border-b border-black/5">
+        <div className="flex w-[200%] animate-marquee">
+          {[...clients, ...clients].map((client, i) => (
+            <div key={i} className="flex-1 flex justify-center items-center px-8">
+              <span className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
+                {client}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* FEATURE SECTION (DUPLEX) */}
       <section className="section-white section-padding">
         <div className="container-x grid md:grid-cols-2 gap-20 items-center">
@@ -113,7 +129,7 @@ const Index = () => {
               </h2>
             </div>
             <p className="text-body text-gray-600 max-w-xl">
-              Não executamos apenas tarefas avulsas. Entregamos estrutura. A ESNA atua na integração total de disciplinas, transformando complexidade em vantagem operacional para grandes indústrias.
+              Não executamos apenas tarefas avulsas. Entregamos estrutura. A ESNA atua na integração total de disciplinas, transformando complexidade em vantagem operacional para grandes indústrias e projetos de mission-critical.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
               <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
@@ -148,10 +164,10 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "DEFENSE", img: p1 },
-              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "AIP", img: p2 },
-              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "FOUNDRY", img: p3 },
-              { t: "ESNA CORP", d: "Gestão estratégica, PCM e coordenação de grandes obras.", tag: "APOLLO", img: p4 },
+              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "CIVIL & MECÂNICA", img: p1 },
+              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "INDÚSTRIA 4.0", img: p2 },
+              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "SUSTENTABILIDADE", img: p3 },
+              { t: "ESNA CORP", d: "Gestão estratégica, facilities, PCM e coordenação de grandes obras.", tag: "FACILITIES & GESTÃO", img: p4 },
             ].map((s) => (
               <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0">
                 <div className="w-full h-[200px] overflow-hidden">
@@ -205,15 +221,6 @@ const Index = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CLIENTS (SUBTLE) */}
-      <section className="section-surface border-y border-black/10">
-        <div className="container-x py-12 flex flex-wrap items-center justify-between gap-12 opacity-50 grayscale">
-          {["Schuler", "Santander", "Petribu", "FVO", "Ypê"].map(c => (
-            <span key={c} className="text-h2 text-void font-bold tracking-tightest">{c}</span>
-          ))}
         </div>
       </section>
 

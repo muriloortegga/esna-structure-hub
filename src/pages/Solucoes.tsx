@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const units = [
   {
     badge: "ESNA INFRA",
+    id: "infra",
     sub: "Civil & Manutenção",
     desc: "Solidez que sustenta o crescimento. Caldeiraria, civil, mecânica industrial, refrigeração e montagem com rigor técnico absoluto.",
     services: [
@@ -15,6 +16,7 @@ const units = [
   },
   {
     badge: "ESNA TECH",
+    id: "automacao",
     sub: "Automação & Robótica",
     desc: "Onde o futuro encontra a execução. Automação industrial, robótica avançada e sistemas integrados para a indústria 4.0.",
     services: [
@@ -24,6 +26,7 @@ const units = [
   },
   {
     badge: "ESNA ENERGY",
+    id: "energia",
     sub: "Elétrica & Sustentabilidade",
     desc: "Energia para a evolução. Engenharia elétrica industrial e sistemas sustentáveis que equilibram potência e responsabilidade.",
     services: [
@@ -33,6 +36,7 @@ const units = [
   },
   {
     badge: "ESNA CORPORATE",
+    id: "gestao",
     sub: "Gestão & Dados",
     desc: "A inteligência por trás da operação. Dados, governança, compliance e gestão integrada de ativos e facilities.",
     services: [
@@ -52,7 +56,7 @@ export default function Solucoes() {
       
       {/* UNITS LIST */}
       {units.map((u, i) => (
-        <section key={u.badge} className={`section-padding border-b border-border-sutil ${i % 2 === 0 ? "section-white" : "section-surface"}`}>
+        <section id={u.id} key={u.badge} className={`section-padding border-b border-border-sutil scroll-mt-[60px] ${i % 2 === 0 ? "section-white" : "section-surface"}`}>
           <div className="container-x">
             <div className="grid md:grid-cols-12 gap-12 md:gap-20">
               <div className="md:col-span-4 flex flex-col gap-6">
