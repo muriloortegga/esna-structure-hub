@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { Zap, Cpu, Building2, BarChart } from "lucide-react";
 import Layout from "@/components/site/Layout";
 import heroImage from "@/assets/hero-structure.jpg";
 import p1 from "@/assets/project-1.jpg";
@@ -30,26 +30,29 @@ const Index = () => {
             <h1 className="text-[48px] md:text-[72px] leading-[1.1] font-sans font-medium tracking-tight text-white animate-reveal [animation-delay:200ms]">
               Com engenharia integrada para toda decisão estrutural.
             </h1>
-            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans">
+            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans mb-8">
               Projetamos, estruturamos e executamos sistemas complexos onde a precisão técnica encontra a eficiência operacional absoluta.
             </p>
-          </div>
-        </div>
-
-        {/* Hero Footer Stats / Video Box placeholder */}
-        <div className="container-x relative z-10 mt-auto pt-24 grid grid-cols-2 md:grid-cols-4 gap-8 animate-reveal [animation-delay:600ms]">
-          {/* We can leave the stats or remove them to match the exact vibe, let's keep them as a subtle footer for the hero */}
-          {[
-            { label: "Unidade 01", value: "Energia" },
-            { label: "Unidade 02", value: "Automação" },
-            { label: "Unidade 03", value: "Infra" },
-            { label: "Unidade 04", value: "Gestão" },
-          ].map((s) => (
-            <div key={s.value} className="flex flex-col gap-2 border-t border-white/30 pt-6">
-              <span className="text-[14px] font-sans text-gray-300">{s.label}</span>
-              <span className="text-[18px] font-sans font-medium text-white">{s.value}</span>
+            
+            {/* Floating Units */}
+            <div className="flex flex-wrap justify-center gap-4 animate-reveal [animation-delay:600ms]">
+              {[
+                { label: "Energia", icon: Zap, link: "/solucoes" },
+                { label: "Automação", icon: Cpu, link: "/solucoes" },
+                { label: "Infra", icon: Building2, link: "/solucoes" },
+                { label: "Gestão", icon: BarChart, link: "/solucoes" },
+              ].map((s) => (
+                <Link 
+                  key={s.label} 
+                  to={s.link}
+                  className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all font-sans font-medium"
+                >
+                  <s.icon size={16} className="text-gray-300" />
+                  {s.label}
+                </Link>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
