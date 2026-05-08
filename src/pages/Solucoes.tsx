@@ -55,8 +55,8 @@ export default function Solucoes() {
         <section key={u.badge} className={`section-padding border-b border-border-sutil ${i % 2 === 0 ? "section-white" : "section-surface"}`}>
           <div className="container-x">
             <div className="grid md:grid-cols-12 gap-12 md:gap-20">
-              <div className="md:col-span-4 flex flex-col gap-6 sticky top-24 h-fit">
-                <span className="earmark-tag bg-void text-white self-start">{u.badge}</span>
+              <div className="md:col-span-4 flex flex-col gap-6">
+                <span className="earmark-tag bg-void text-white self-start px-2 py-1">{u.badge}</span>
                 <h2 className="text-display text-void">{u.sub}</h2>
                 <p className="text-body text-gray-600 leading-relaxed">
                   {u.desc}
@@ -66,7 +66,7 @@ export default function Solucoes() {
               
               <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
                 {u.services.map((s) => (
-                  <div key={s.t} className="card-surface group hover:bg-white transition-all">
+                  <div key={s.t} className="card-surface group hover:bg-white transition-all p-8 border border-black/10">
                     <div className="flex flex-col h-full">
                       <h3 className="text-h1 text-void mb-6 group-hover:underline underline-offset-4 decoration-1">{s.t}</h3>
                       <p className="text-body text-gray-500 mb-10 flex-grow">{s.body}</p>
@@ -89,7 +89,7 @@ export default function Solucoes() {
           <h2 className="text-display text-white max-w-3xl">
             Sua operação merece uma <span className="text-gray-400 italic">Estrutura de Engenharia</span> de alto nível.
           </h2>
-          <Link to="/contato" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-12">
+          <Link to="/contato" className="btn-esna-primary bg-white text-void hover:bg-gray-200 px-12">
             Solicitar Proposta Técnica
           </Link>
         </div>

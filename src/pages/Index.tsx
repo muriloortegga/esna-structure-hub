@@ -5,6 +5,7 @@ import heroImage from "@/assets/hero-structure.jpg";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.jpg";
 import p3 from "@/assets/project-3.jpg";
+import p4 from "@/assets/project-4.jpg";
 import { projects } from "@/data/projects";
 
 const Index = () => {
@@ -85,7 +86,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SOLUTIONS GRID (3-COL) */}
+      {/* SOLUTIONS GRID (4-COL) */}
       <section className="section-surface section-padding">
         <div className="container-x">
           <div className="flex items-end justify-between mb-16 gap-8">
@@ -96,11 +97,12 @@ const Index = () => {
             <Link to="/solucoes" className="btn-esna-arrow">Ver todas as frentes →</Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "DEFENSE", img: p1 },
               { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "AIP", img: p2 },
               { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "FOUNDRY", img: p3 },
+              { t: "ESNA CORP", d: "Gestão estratégica, PCM e coordenação de grandes obras.", tag: "APOLLO", img: p4 },
             ].map((s) => (
               <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0">
                 <div className="w-full h-[200px] overflow-hidden">
