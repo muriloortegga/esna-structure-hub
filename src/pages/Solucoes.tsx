@@ -7,8 +7,8 @@ const units = [
     badge: "ESNA INFRA",
     id: "infra",
     link: "/infraestrutura",
-    sub: "Civil & Manutenção",
-    desc: "Solidez que sustenta o crescimento. Caldeiraria, civil, mecânica industrial, refrigeração e montagem com rigor técnico absoluto.",
+    sub: "Infraestrutura Integrada",
+    desc: "Estruturas técnicas desenvolvidas para sustentar operações com eficiência, organização e capacidade de expansão.",
     services: [
       { t: "Caldeiraria Industrial", body: "Grande e médio porte. Soldagem certificada SMAW/MIG/TIG." },
       { t: "Civil & Manutenção Predial", body: "Construção civil, retrofit e manutenção com foco em performance." },
@@ -19,8 +19,8 @@ const units = [
     badge: "ESNA TECH",
     id: "automacao",
     link: "/tech",
-    sub: "Automação & Robótica",
-    desc: "Onde o futuro encontra a execução. Automação industrial, robótica avançada e sistemas integrados para a indústria 4.0.",
+    sub: "Tecnologia & Sistemas",
+    desc: "Automação, monitoramento e inteligência aplicada para operações mais conectadas e eficientes.",
     services: [
       { t: "Automação Industrial", body: "Sistemas CLP, SCADA e HMI. Redes industriais Profibus/Profinet." },
       { t: "Robótica & Montagem", body: "Robótica colaborativa, visão computacional e linhas de produção." }
@@ -30,19 +30,19 @@ const units = [
     badge: "ESNA ENERGY",
     id: "energia",
     link: "/energia",
-    sub: "Elétrica & Sustentabilidade",
-    desc: "Energia para a evolução. Engenharia elétrica industrial e sistemas sustentáveis que equilibram potência e responsabilidade.",
+    sub: "Energia & Potência",
+    desc: "Soluções energéticas integradas para operações que dependem de estabilidade, segurança e desempenho contínuo.",
     services: [
       { t: "Engenharia Elétrica", body: "Infraestrutura de grande escala, subestações e SPDA." },
       { t: "Sistemas Sustentáveis", body: "Soluções de eficiência energética e redução de impacto ambiental." }
     ]
   },
   {
-    badge: "ESNA CORPORATE",
+    badge: "ESNA GESTÃO",
     id: "gestao",
     link: "/gestao",
-    sub: "Gestão & Dados",
-    desc: "A inteligência por trás da operação. Dados, governança, compliance e gestão integrada de ativos e facilities.",
+    sub: "Planejamento & Gestão",
+    desc: "Planejamento, coordenação e controle operacional para garantir previsibilidade e execução consistente.",
     services: [
       { t: "Gestão de Ativos", body: "Governança operacional e gestão estratégica de facilities." },
       { t: "Dados & Inteligência", body: "Transformamos dados operacionais em decisões estratégicas." }

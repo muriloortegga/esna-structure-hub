@@ -76,7 +76,6 @@ const Index = () => {
           )}
           <div className="absolute inset-0 bg-black/40" />
         </div>
-
         <div className="container-x relative z-10 pt-32 flex flex-col items-center text-center">
           <div className="flex flex-col gap-6 max-w-5xl items-center">
             <h1 className="text-[48px] md:text-[72px] leading-[1.05] font-sans tracking-tighter text-white animate-reveal [animation-delay:200ms]">
@@ -155,7 +154,7 @@ const Index = () => {
         <div className="container-x">
           <div className="flex items-end justify-between mb-16 gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-display text-void">Soluções que Escalam.</h2>
+              <h2 className="text-display text-void tracking-tighter">Soluções que Escalam.</h2>
             </div>
             <Link to="/solucoes" className="btn-esna-arrow">Ver todas as frentes →</Link>
           </div>
@@ -163,8 +162,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { t: "INFRAESTRUTURA", d: "Estruturas técnicas desenvolvidas para sustentar operações com eficiência, organização e capacidade de expansão.", tag: "CIVIL & MECÂNICA", img: p1, link: "/infraestrutura" },
-              { t: "TECH", d: "Automação, monitoramento e inteligência aplicada para operações mais conectadas e eficientes.", tag: "INDÚSTRIA 4.0", img: p2, link: "/tech" },
               { t: "ENERGIA", d: "Soluções energéticas integradas para operações que dependem de estabilidade, segurança e desempenho contínuo.", tag: "SUSTENTABILIDADE", img: p3, link: "/energia" },
+              { t: "TECH", d: "Automação, monitoramento e inteligência aplicada para operações mais conectadas e eficientes.", tag: "INDÚSTRIA 4.0", img: p2, link: "/tech" },
               { t: "GESTÃO", d: "Planejamento, coordenação e controle operacional para garantir previsibilidade e execução consistente.", tag: "FACILITIES & GESTÃO", img: p4, link: "/gestao" },
             ].map((s) => (
               <Link to={s.link} key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0 block">
@@ -177,7 +176,7 @@ const Index = () => {
                     <div className="h-4 w-4 border-r border-t border-black/20 group-hover:border-black transition-colors" />
                   </div>
                   <h3 className="text-h1 text-void mb-4">{s.t}</h3>
-                  <p className="text-body text-gray-600 mb-8 flex-grow">{s.d}</p>
+                  <p className="text-body text-gray-600 mb-8 flex-grow font-light tracking-tight">{s.d}</p>
                   <div className="h-px w-full bg-black/10 mb-6" />
                   <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
                 </div>
@@ -203,8 +202,8 @@ const Index = () => {
       <section className="section-white section-padding">
         <div className="container-x">
           <div className="flex flex-col gap-4 mb-16 text-center max-w-3xl mx-auto">
-            <h2 className="text-display text-void">Projetos que validam nossa atuação.</h2>
-            <p className="text-[18px] text-gray-600 font-sans tracking-tight">
+            <h2 className="text-display text-void tracking-tighter">Projetos que validam nossa atuação.</h2>
+            <p className="text-[18px] text-gray-600 font-sans font-light tracking-tight">
               Experiência aplicada em operações que exigem organização, confiabilidade e capacidade técnica.
             </p>
           </div>
@@ -223,7 +222,7 @@ const Index = () => {
                     <span className="earmark-tag border border-black/10 px-2 py-1">{p.type}</span>
                     <span className="text-caption text-gray-400">Case Study</span>
                   </div>
-                  <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
+                  <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1 tracking-tighter font-medium">
                     {p.name}
                   </h3>
                 </div>
@@ -245,6 +244,10 @@ const Index = () => {
           <div className="flex gap-6 mt-4">
             <Link to="/contato" className="btn-esna-primary bg-void text-white hover:bg-gray-800 px-12">
               Entrar em contato
+            </Link>
+          </div>
+        </div>
+      </section>trar em contato
             </Link>
           </div>
         </div>
