@@ -6,6 +6,7 @@ const units = [
   {
     badge: "ESNA INFRA",
     id: "infra",
+    link: "/infraestrutura",
     sub: "Civil & Manutenção",
     desc: "Solidez que sustenta o crescimento. Caldeiraria, civil, mecânica industrial, refrigeração e montagem com rigor técnico absoluto.",
     services: [
@@ -17,6 +18,7 @@ const units = [
   {
     badge: "ESNA TECH",
     id: "automacao",
+    link: "/tech",
     sub: "Automação & Robótica",
     desc: "Onde o futuro encontra a execução. Automação industrial, robótica avançada e sistemas integrados para a indústria 4.0.",
     services: [
@@ -27,6 +29,7 @@ const units = [
   {
     badge: "ESNA ENERGY",
     id: "energia",
+    link: "/energia",
     sub: "Elétrica & Sustentabilidade",
     desc: "Energia para a evolução. Engenharia elétrica industrial e sistemas sustentáveis que equilibram potência e responsabilidade.",
     services: [
@@ -37,6 +40,7 @@ const units = [
   {
     badge: "ESNA CORPORATE",
     id: "gestao",
+    link: "/gestao",
     sub: "Gestão & Dados",
     desc: "A inteligência por trás da operação. Dados, governança, compliance e gestão integrada de ativos e facilities.",
     services: [
@@ -66,19 +70,22 @@ export default function Solucoes() {
                   {u.desc}
                 </p>
                 <div className="h-px w-24 bg-void/10 mt-4" />
+                <Link to={u.link} className="btn-esna-arrow self-start mt-2">
+                  Visitar Página da Frente →
+                </Link>
               </div>
               
               <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
                 {u.services.map((s) => (
-                  <div key={s.t} className="card-surface group hover:bg-white transition-all p-8 border border-black/10">
+                  <Link to={u.link} key={s.t} className="card-surface group hover:bg-white transition-all p-8 border border-black/10 block">
                     <div className="flex flex-col h-full">
                       <h3 className="text-h1 text-void mb-6 group-hover:underline underline-offset-4 decoration-1">{s.t}</h3>
                       <p className="text-body text-gray-500 mb-10 flex-grow">{s.body}</p>
                       <span className="text-[11px] font-bold text-void uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
-                        Especificações Técnicas →
+                        Ver Detalhes da Frente →
                       </span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

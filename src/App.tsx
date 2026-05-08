@@ -10,6 +10,10 @@ import Projetos from "./pages/Projetos.tsx";
 import ProjetoDetalhe from "./pages/ProjetoDetalhe.tsx";
 import Contato from "./pages/Contato.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Infraestrutura from "./pages/Infraestrutura.tsx";
+import Energia from "./pages/Energia.tsx";
+import Tech from "./pages/Tech.tsx";
+import Gestao from "./pages/Gestao.tsx";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +27,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/solucoes" element={<Solucoes />} />
+          <Route path="/infraestrutura" element={<Infraestrutura />} />
+          <Route path="/energia" element={<Energia />} />
+          <Route path="/tech" element={<Tech />} />
+          <Route path="/gestao" element={<Gestao />} />
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/projetos/:slug" element={<ProjetoDetalhe />} />
           <Route path="/contato" element={<Contato />} />

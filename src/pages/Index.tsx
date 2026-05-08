@@ -90,10 +90,10 @@ const Index = () => {
             {/* Floating Units */}
             <div className="flex flex-wrap justify-center gap-4 animate-reveal [animation-delay:600ms]">
               {[
-                { label: "Energia", icon: Zap, link: "/solucoes#energia" },
-                { label: "Automação", icon: Cpu, link: "/solucoes#automacao" },
-                { label: "Infra", icon: Building2, link: "/solucoes#infra" },
-                { label: "Gestão", icon: BarChart, link: "/solucoes#gestao" },
+                { label: "Energia", icon: Zap, link: "/energia" },
+                { label: "Automação", icon: Cpu, link: "/tech" },
+                { label: "Infra", icon: Building2, link: "/infraestrutura" },
+                { label: "Gestão", icon: BarChart, link: "/gestao" },
               ].map((s) => (
                 <Link 
                   key={s.label} 
@@ -172,12 +172,12 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "CIVIL & MECÂNICA", img: p1 },
-              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "INDÚSTRIA 4.0", img: p2 },
-              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "SUSTENTABILIDADE", img: p3 },
-              { t: "ESNA CORP", d: "Gestão estratégica, facilities, PCM e coordenação de grandes obras.", tag: "FACILITIES & GESTÃO", img: p4 },
+              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "CIVIL & MECÂNICA", img: p1, link: "/infraestrutura" },
+              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "INDÚSTRIA 4.0", img: p2, link: "/tech" },
+              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "SUSTENTABILIDADE", img: p3, link: "/energia" },
+              { t: "ESNA CORP", d: "Gestão estratégica, facilities, PCM e coordenação de grandes obras.", tag: "FACILITIES & GESTÃO", img: p4, link: "/gestao" },
             ].map((s) => (
-              <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0">
+              <Link to={s.link} key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0 block">
                 <div className="w-full h-[200px] overflow-hidden">
                    <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -191,7 +191,7 @@ const Index = () => {
                   <div className="h-px w-full bg-black/10 mb-6" />
                   <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
