@@ -27,7 +27,7 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         // Design System Specific
-        void: "#101010",
+        void: "#1A1C1E",
         depth: "#1E293B",
         pale: "#F8FAFC",
         surf2: "#E2E8F0",
@@ -36,12 +36,12 @@ export default {
           pure: "#FFFFFF"
         },
         slate: "#64748B",
-        black: "#000000",
+        black: "#1A1C1E",
         "border-sutil": "#E2E8F0",
         "border-emphasis": "#1E293B",
         surface: "#FFFFFF",
-        mint: "#000000", // Changing mint to black to match the stark design
-        highlight: "#101010"
+        mint: "#1A1C1E", // Changing mint to black to match the stark design
+        highlight: "#1A1C1E"
       },
       borderRadius: {
         none: "0",
