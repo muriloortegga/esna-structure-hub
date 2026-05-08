@@ -77,20 +77,21 @@ const Index = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="container-x relative z-10 pt-32 flex flex-col items-start justify-center h-full">
-          <div className="flex flex-col gap-8 max-w-4xl">
-            <h1 className="text-[56px] md:text-[80px] leading-[1.05] font-display font-medium tracking-tighter text-white animate-reveal [animation-delay:200ms]">
+        <div className="container-x relative z-10 pt-32 flex flex-col items-center text-center">
+          <div className="flex flex-col gap-6 max-w-5xl items-center">
+            <h1 className="text-[48px] md:text-[72px] leading-[1.1] font-sans font-medium tracking-tight text-white animate-reveal [animation-delay:200ms]">
               Engenharia integrada para operações que exigem precisão.
             </h1>
-            <p className="text-[20px] md:text-[24px] text-gray-300 animate-reveal [animation-delay:400ms] max-w-3xl font-sans font-light tracking-tight mb-8">
+            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans mb-8">
               Infraestrutura, energia, tecnologia e gestão conectadas em soluções estruturadas para ambientes complexos.
             </p>
             
-            <div className="flex flex-wrap gap-6 animate-reveal [animation-delay:600ms]">
-              <Link to="/solucoes" className="btn-esna-primary bg-white text-void hover:bg-gray-200 px-10 py-4">
+            {/* CTA Buttons */}
+            <div className="flex gap-6 animate-reveal [animation-delay:600ms]">
+              <Link to="/solucoes" className="btn-esna-primary bg-white text-void hover:bg-gray-200 px-12">
                 Conheça nossas soluções
               </Link>
-              <Link to="/projetos" className="border border-white text-white hover:bg-white hover:text-void px-10 py-4 text-[12px] font-mono uppercase tracking-widest transition-all">
+              <Link to="/projetos" className="border border-white text-white hover:bg-white hover:text-void px-12 py-3 text-[12px] font-mono uppercase tracking-widest transition-all">
                 Ver projetos
               </Link>
             </div>
@@ -99,15 +100,15 @@ const Index = () => {
       </section>
 
       {/* FLOATING CLIENTS TICKER */}
-      <div className="w-full overflow-hidden bg-white py-16 flex">
-        <div className="flex w-max animate-marquee gap-20 items-center pr-20">
+      <div className="w-full overflow-hidden bg-white py-12 flex">
+        <div className="flex w-max animate-marquee gap-16 items-center pr-16">
           {clientLogos.length > 0 ? (
             [...clientLogos, ...clientLogos].map((logo, i) => (
-              <img key={i} src={logo} alt="Client Logo" className="max-h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity grayscale-0" />
+              <img key={i} src={logo} alt="Client Logo" className="max-h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity grayscale-0" />
             ))
           ) : (
             [...clients, ...clients].map((client, i) => (
-              <span key={i} className="text-h2 text-void font-bold tracking-tighter uppercase opacity-60 hover:opacity-100 transition-all cursor-default">
+              <span key={i} className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
                 {client}
               </span>
             ))
@@ -115,122 +116,137 @@ const Index = () => {
         </div>
       </div>
 
-      {/* BLOCO INSTITUCIONAL / SOBRE */}
-      <section className="section-white py-32 md:py-48">
-        <div className="container-x grid md:grid-cols-12 gap-16 md:gap-24 items-start">
-          <div className="md:col-span-5 flex flex-col gap-6">
-            <h2 className="text-display text-void leading-tight">
-              Estrutura para resolver com eficiência.
-            </h2>
-          </div>
-          <div className="md:col-span-7 flex flex-col gap-8 pt-2">
-            <p className="text-[20px] md:text-[28px] text-gray-800 leading-relaxed font-sans font-light tracking-tight">
+      {/* BLOCO INSTITUCIONAL / SOBRE (DUPLEX) */}
+      <section className="section-white section-padding">
+        <div className="container-x grid md:grid-cols-2 gap-20 items-center">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-display text-void leading-tight">
+                Estrutura para resolver com eficiência.
+              </h2>
+            </div>
+            <p className="text-body text-gray-600 max-w-xl">
               A ESNA atua na integração entre diferentes disciplinas da engenharia, organizando processos, sistemas e operações com clareza técnica e visão estratégica.
-            </p>
-            <p className="text-[20px] md:text-[28px] text-gray-800 leading-relaxed font-sans font-light tracking-tight">
+              <br /><br />
               Desenvolvemos soluções completas para empresas que exigem confiabilidade, precisão e capacidade de execução.
             </p>
-            <Link to="/sobre" className="btn-esna-arrow mt-8 self-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+              <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
+                <span className="text-h2 text-void">+10 Anos</span>
+                <p className="text-[11px] text-gray-500 uppercase tracking-widest font-mono font-bold">Experiência Industrial</p>
+              </div>
+              <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
+                <span className="text-h2 text-void">+50 Projetos</span>
+                <p className="text-[11px] text-gray-500 uppercase tracking-widest font-mono font-bold">Entregues com Precisão</p>
+              </div>
+            </div>
+            <Link to="/sobre" className="btn-esna-arrow self-start mt-4">
               Conheça nossa metodologia →
             </Link>
+          </div>
+          <div className="p-0 overflow-hidden aspect-video bg-gray-200">
+             <img src={heroImage} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
 
-      {/* ÁREAS DE ATUAÇÃO / 4 FRENTES */}
-      <section className="section-surface py-32 md:py-48 border-y border-black/5">
+      {/* ÁREAS DE ATUAÇÃO / 4 FRENTES (4-COL) */}
+      <section className="section-surface section-padding">
         <div className="container-x">
-          <div className="flex flex-col gap-24">
-            
-            <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-              {[
-                { t: "Infraestrutura", d: "Estruturas técnicas desenvolvidas para sustentar operações com eficiência, organização e capacidade de expansão.", img: p1, link: "/infraestrutura" },
-                { t: "Energia", d: "Soluções energéticas integradas para operações que dependem de estabilidade, segurança e desempenho contínuo.", img: p3, link: "/energia" },
-                { t: "Tech", d: "Automação, monitoramento e inteligência aplicada para operações mais conectadas e eficientes.", img: p2, link: "/tech" },
-                { t: "Gestão", d: "Planejamento, coordenação e controle operacional para garantir previsibilidade e execução consistente.", img: p4, link: "/gestao" },
-              ].map((s, i) => (
-                <Link to={s.link} key={s.t} className="group flex flex-col gap-8 block">
-                  <div className="w-full aspect-[4/3] overflow-hidden bg-gray-200">
-                    <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" />
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <span className="text-[12px] font-mono tracking-widest text-gray-400 uppercase">0{i + 1}</span>
-                    <h3 className="text-[32px] font-display text-void font-medium tracking-tight group-hover:underline underline-offset-4 decoration-1">{s.t}</h3>
-                    <p className="text-[18px] text-gray-600 leading-relaxed max-w-lg">{s.d}</p>
-                  </div>
-                </Link>
-              ))}
+          <div className="flex items-end justify-between mb-16 gap-8">
+            <div className="flex flex-col gap-4">
+              <h2 className="text-display text-void">Soluções que Escalam.</h2>
             </div>
+            <Link to="/solucoes" className="btn-esna-arrow">Ver todas as frentes →</Link>
+          </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { t: "INFRAESTRUTURA", d: "Estruturas técnicas desenvolvidas para sustentar operações com eficiência, organização e capacidade de expansão.", tag: "CIVIL & MECÂNICA", img: p1, link: "/infraestrutura" },
+              { t: "TECH", d: "Automação, monitoramento e inteligência aplicada para operações mais conectadas e eficientes.", tag: "INDÚSTRIA 4.0", img: p2, link: "/tech" },
+              { t: "ENERGIA", d: "Soluções energéticas integradas para operações que dependem de estabilidade, segurança e desempenho contínuo.", tag: "SUSTENTABILIDADE", img: p3, link: "/energia" },
+              { t: "GESTÃO", d: "Planejamento, coordenação e controle operacional para garantir previsibilidade e execução consistente.", tag: "FACILITIES & GESTÃO", img: p4, link: "/gestao" },
+            ].map((s) => (
+              <Link to={s.link} key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0 block">
+                <div className="w-full h-[200px] overflow-hidden">
+                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-12">
+                    <span className="earmark-tag bg-void text-white px-2 py-1">{s.tag}</span>
+                    <div className="h-4 w-4 border-r border-t border-black/20 group-hover:border-black transition-colors" />
+                  </div>
+                  <h3 className="text-h1 text-void mb-4">{s.t}</h3>
+                  <p className="text-body text-gray-600 mb-8 flex-grow">{s.d}</p>
+                  <div className="h-px w-full bg-black/10 mb-6" />
+                  <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* BLOCO DIFERENCIAL */}
-      <section className="section-void py-32 md:py-48 text-center flex flex-col items-center justify-center">
-        <div className="container-x flex flex-col items-center gap-10 max-w-5xl">
-          <h2 className="text-[56px] md:text-[80px] leading-[1.05] font-display font-medium tracking-tighter text-white">
+      <section className="section-void section-padding text-center">
+        <div className="container-x flex flex-col items-center gap-10">
+          <h2 className="text-display text-white max-w-4xl">
             Integração como método.
           </h2>
-          <p className="text-[20px] md:text-[32px] text-gray-300 leading-relaxed font-sans font-light tracking-tight">
+          <p className="text-[20px] md:text-[24px] text-gray-300 max-w-3xl font-sans font-light tracking-tight">
             A capacidade de integrar diferentes áreas da engenharia permite à ESNA desenvolver soluções mais eficientes, reduzir ruídos operacionais e garantir maior controle em todas as etapas do projeto.
           </p>
         </div>
       </section>
 
-      {/* BLOCO DE PROJETOS */}
-      <section className="section-white py-32 md:py-48">
+      {/* BLOCO DE PROJETOS (DARK) */}
+      <section className="section-white section-padding">
         <div className="container-x">
-          <div className="flex flex-col gap-6 mb-24 max-w-3xl">
-            <h2 className="text-display text-void leading-tight">Projetos que validam nossa atuação.</h2>
-            <p className="text-[20px] md:text-[24px] text-gray-600 font-light tracking-tight">
+          <div className="flex flex-col gap-4 mb-16 text-center max-w-3xl mx-auto">
+            <h2 className="text-display text-void">Projetos que validam nossa atuação.</h2>
+            <p className="text-[18px] text-gray-600 font-sans tracking-tight">
               Experiência aplicada em operações que exigem organização, confiabilidade e capacidade técnica.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-24">
+          <div className="grid md:grid-cols-2 gap-12">
             {projects.slice(0, 2).map((p) => (
               <Link to={`/projetos/${p.slug}`} key={p.slug} className="group flex flex-col gap-8">
-                <div className="overflow-hidden aspect-[16/11] bg-gray-100">
+                <div className="card-surface p-0 overflow-hidden aspect-[16/10] bg-void">
                   <img
                     src={p.cover}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-4">
-                    <span className="text-[11px] font-mono tracking-widest uppercase font-bold text-void">{p.type}</span>
-                    <span className="w-8 h-px bg-black/20"></span>
-                    <span className="text-[14px] text-gray-500 font-light">Case Study</span>
+                    <span className="earmark-tag border border-black/10 px-2 py-1">{p.type}</span>
+                    <span className="text-caption text-gray-400">Case Study</span>
                   </div>
-                  <h3 className="text-[32px] md:text-[40px] leading-tight text-void font-medium tracking-tight group-hover:underline underline-offset-8 decoration-1">
+                  <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
                     {p.name}
                   </h3>
                 </div>
               </Link>
             ))}
           </div>
-          
-          <div className="mt-24 text-center">
-            <Link to="/projetos" className="btn-esna-arrow text-[14px]">
-              Ver portfólio completo →
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* CTA FINAL */}
-      <section className="section-surface py-32 md:py-48 border-t border-black/10 text-center">
-        <div className="container-x flex flex-col items-center gap-12 max-w-4xl">
-          <h2 className="text-[48px] md:text-[72px] leading-[1.05] font-display font-medium tracking-tighter text-void">
+      <section className="section-surface section-padding text-center border-t border-black/10">
+        <div className="container-x flex flex-col items-center gap-10">
+          <h2 className="text-display text-void max-w-4xl">
             Vamos estruturar seu próximo projeto.
           </h2>
-          <p className="text-[20px] md:text-[28px] text-gray-600 font-light tracking-tight">
+          <p className="text-[20px] md:text-[24px] text-gray-600 font-light tracking-tight max-w-2xl">
             Entre em contato com a ESNA e desenvolva soluções preparadas para operar com eficiência, clareza e escala.
           </p>
-          <Link to="/contato" className="btn-esna-primary bg-void text-white hover:bg-gray-800 px-12 py-5 mt-4 text-[14px]">
-            Entrar em contato
-          </Link>
+          <div className="flex gap-6 mt-4">
+            <Link to="/contato" className="btn-esna-primary bg-void text-white hover:bg-gray-800 px-12">
+              Entrar em contato
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
