@@ -51,9 +51,9 @@ export default {
         lg: "0",
       },
       fontFamily: {
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
-        display: ['"Inter"', 'system-ui', 'sans-serif'],
-        ui: ['"Inter"', 'system-ui', 'sans-serif'],
+        sans: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
+        display: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
+        ui: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"SF Mono"', '"Courier New"', 'monospace'],
       },
       boxShadow: {
