@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/site/Layout";
-import hero from "@/assets/hero-structure.jpg";
+import heroImage from "@/assets/hero-structure.jpg";
+import p1 from "@/assets/project-1.jpg";
+import p2 from "@/assets/project-2.jpg";
+import p3 from "@/assets/project-3.jpg";
 import { projects } from "@/data/projects";
 
 const Index = () => {
@@ -10,10 +13,13 @@ const Index = () => {
       {/* HERO SECTION */}
       <section className="h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-0">
         <div className="absolute inset-0 z-0">
-          <img
-            src={hero}
-            alt="ESNA Integrated Engineering"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
+            src="https://videos.pexels.com/video-files/3201509/3201509-hd_1920_1080_25fps.mp4"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -73,8 +79,8 @@ const Index = () => {
               Conheça nossa metodologia →
             </Link>
           </div>
-          <div className="card-surface p-0 overflow-hidden aspect-video bg-gray-200">
-             <img src={hero} className="w-full h-full object-cover grayscale opacity-80" />
+          <div className="p-0 overflow-hidden aspect-video bg-gray-200">
+             <img src={heroImage} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -92,19 +98,24 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "DEFENSE" },
-              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "AIP" },
-              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "FOUNDRY" },
+              { t: "ESNA INFRA", d: "Caldeiraria, mecânica e estruturas de alta complexidade.", tag: "DEFENSE", img: p1 },
+              { t: "ESNA TECH", d: "Automação, robótica e integração Industry 4.0.", tag: "AIP", img: p2 },
+              { t: "ESNA ENERGY", d: "Eficiência energética e infraestrutura elétrica industrial.", tag: "FOUNDRY", img: p3 },
             ].map((s) => (
-              <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group">
-                <div className="flex items-center justify-between mb-12">
-                  <span className="earmark-tag bg-void text-white px-2 py-1">{s.tag}</span>
-                  <div className="h-4 w-4 border-r border-t border-black/20 group-hover:border-black transition-colors" />
+              <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group p-0">
+                <div className="w-full h-[200px] overflow-hidden">
+                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <h3 className="text-h1 text-void mb-4">{s.t}</h3>
-                <p className="text-body text-gray-600 mb-8 flex-grow">{s.d}</p>
-                <div className="h-px w-full bg-black/10 mb-6" />
-                <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-12">
+                    <span className="earmark-tag bg-void text-white px-2 py-1">{s.tag}</span>
+                    <div className="h-4 w-4 border-r border-t border-black/20 group-hover:border-black transition-colors" />
+                  </div>
+                  <h3 className="text-h1 text-void mb-4">{s.t}</h3>
+                  <p className="text-body text-gray-600 mb-8 flex-grow">{s.d}</p>
+                  <div className="h-px w-full bg-black/10 mb-6" />
+                  <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
+                </div>
               </div>
             ))}
           </div>

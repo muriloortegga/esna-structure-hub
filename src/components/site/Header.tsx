@@ -35,7 +35,7 @@ export default function Header() {
       )}
 
       {/* NAV BAR */}
-      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-void border-b border-white/10" : "bg-gradient-to-b from-black/60 to-transparent"}`}>
+      <header className={`w-full transition-all duration-300 bg-black/10 backdrop-blur-xl border-b border-white/10`}>
         <div className="container-x flex items-center justify-between h-[60px]">
           <Link to="/" className="flex items-center gap-2 group">
             <span className="font-display font-medium text-[20px] tracking-tight text-white uppercase">ESNA</span>
