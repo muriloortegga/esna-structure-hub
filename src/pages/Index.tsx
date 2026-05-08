@@ -247,10 +247,6 @@ const Index = () => {
             </Link>
           </div>
         </div>
-      </section>trar em contato
-            </Link>
-          </div>
-        </div>
       </section>
     </Layout>
   );
