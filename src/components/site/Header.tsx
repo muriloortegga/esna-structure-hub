@@ -77,20 +77,49 @@ export default function Header() {
       </header>
 
       {/* MOBILE MENU */}
-      {open && (
-        <div className="md:hidden bg-void border-t border-white/10 h-screen overflow-y-auto">
-          <div className="container-x py-10 flex flex-col gap-6">
-            {links.map((l) => (
-              <NavLink key={l.to} to={l.to} className="text-[24px] font-display text-white">
+      <div 
+        className={`md:hidden fixed inset-0 z-[60] bg-void transition-all duration-500 ease-in-out ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      >
+        <div className="container-x h-full flex flex-col justify-between py-12">
+          <div className="flex justify-between items-center h-[60px]">
+            <Link to="/" onClick={() => setOpen(false)} className="font-display font-medium text-[20px] tracking-tighter text-white uppercase">ESNA</Link>
+            <button onClick={() => setOpen(false)} className="p-2 text-white">
+              <X size={24} />
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-8">
+            {links.map((l, i) => (
+              <NavLink 
+                key={l.to} 
+                to={l.to} 
+                onClick={() => setOpen(false)}
+                className={({ isActive }) => 
+                  `text-[40px] font-display leading-tight tracking-tighter transition-all duration-300 ${isActive ? "text-white" : "text-white/30 hover:text-white"}`
+                }
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/contato" className="btn-esna-primary bg-white text-void inline-flex self-start mt-4">
+          </nav>
+
+          <div className="flex flex-col gap-10">
+            <Link 
+              to="/contato" 
+              onClick={() => setOpen(false)}
+              className="bg-white text-void py-5 px-8 text-center text-[12px] font-mono font-bold uppercase tracking-[0.2em]"
+            >
               Comece agora
             </Link>
+            <div className="flex gap-8 text-[10px] font-mono font-bold text-white/30 uppercase tracking-[0.3em]">
+              <span>LinkedIn</span>
+              <span>Instagram</span>
+              <span>Youtube</span>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
