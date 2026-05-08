@@ -27,34 +27,34 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         // Design System Specific
-        depth: "#0C444A",
-        mint: "#9FE1CB",
-        pale: "#E1F5EE",
-        void: "#1A1C1E",
-        surf2: "#21262B",
+        void: "#101010",
+        depth: "#1E293B",
+        pale: "#F8FAFC",
+        surf2: "#E2E8F0",
         white: {
-          DEFAULT: "#F5F3EF",
+          DEFAULT: "#FFFFFF",
           pure: "#FFFFFF"
         },
-        slate: "#7A8490",
-        black: "#111315",
-        "border-sutil": "#21262B",
-        "border-emphasis": "#0C444A",
-        surface: "#111315", // mapping surface to black
-        highlight: "#0C444A"
+        slate: "#64748B",
+        black: "#000000",
+        "border-sutil": "#E2E8F0",
+        "border-emphasis": "#1E293B",
+        surface: "#FFFFFF",
+        mint: "#000000", // Changing mint to black to match the stark design
+        highlight: "#101010"
       },
       borderRadius: {
         none: "0",
-        sm: "2px",
-        DEFAULT: "2px",
-        md: "4px",
-        lg: "6px",
+        sm: "0",
+        DEFAULT: "0",
+        md: "0",
+        lg: "0",
       },
       fontFamily: {
-        sans: ['"Calibri"', 'system-ui', 'sans-serif'],
-        display: ['"Georgia"', 'serif'],
-        ui: ['"Calibri"', 'system-ui', 'sans-serif'],
-        mono: ['"Courier New"', 'monospace'],
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        display: ['"Inter"', 'system-ui', 'sans-serif'],
+        ui: ['"Inter"', 'system-ui', 'sans-serif'],
+        mono: ['"SF Mono"', '"Courier New"', 'monospace'],
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',

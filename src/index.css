@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%; /* F5F3EF - pale/white */
-    --foreground: 0 0% 11%; /* 1A1C1E - void */
-    --radius: 2px;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --radius: 0px;
   }
 
   * { @apply border-border-sutil; }
-  html { -webkit-font-smoothing: antialiased; font-family: 'Calibri', system-ui, sans-serif; }
+  html { -webkit-font-smoothing: antialiased; font-family: 'Inter', system-ui, sans-serif; }
   body {
-    @apply bg-void text-white font-sans;
+    @apply bg-white text-void font-sans;
     font-size: 14px;
     line-height: 1.6;
   }
@@ -27,13 +27,13 @@
 
   /* Typography Scale */
   .text-display {
-    @apply text-[36px] md:text-[48px] leading-[1.2] font-display;
+    @apply text-[36px] md:text-[48px] leading-[1.2] font-display font-medium tracking-tight;
   }
   .text-h1 {
-    @apply text-[24px] md:text-[28px] leading-[1.2] font-display;
+    @apply text-[24px] md:text-[28px] leading-[1.2] font-display tracking-tight;
   }
   .text-h2 {
-    @apply text-[18px] md:text-[20px] leading-[1.3] font-sans font-bold;
+    @apply text-[18px] md:text-[20px] leading-[1.3] font-sans font-medium;
   }
   .text-body {
     @apply text-[14px] md:text-[16px] leading-[1.6] font-sans;
@@ -52,35 +52,35 @@
 
   /* Components */
   .announcement-bar {
-    @apply h-[40px] flex items-center justify-center bg-depth text-mint text-[11px] font-mono uppercase tracking-widest full-bleed;
+    @apply h-[40px] flex items-center justify-center bg-void text-white text-[11px] font-mono uppercase tracking-widest full-bleed;
   }
   
   .nav-sticky {
-    @apply h-[52px] flex items-center bg-void/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 transition-all;
+    @apply h-[52px] flex items-center bg-white/90 backdrop-blur-md border-b border-black/10 sticky top-0 z-50 transition-all;
   }
 
   .btn-palantir-primary {
-    @apply bg-depth text-mint border border-mint/50 px-6 py-3 rounded-sm text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-mint hover:text-depth;
+    @apply bg-void text-white border border-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-white hover:text-void;
   }
   .btn-palantir-secondary {
-    @apply border border-mint text-mint px-6 py-3 rounded-sm text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-mint/10;
+    @apply border border-void text-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-black/5;
   }
   .btn-palantir-ghost {
-    @apply text-white px-6 py-3 rounded-sm text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-white/5;
+    @apply text-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-black/5;
   }
   .btn-palantir-arrow {
-    @apply text-mint text-[12px] font-mono uppercase tracking-widest hover:text-white transition-colors;
+    @apply text-void text-[12px] font-mono uppercase tracking-widest hover:text-slate transition-colors;
   }
 
   .card-surface {
-    @apply bg-surf2 border border-mint/30 rounded-sm p-8 transition-all hover:border-mint/60 relative overflow-hidden;
+    @apply bg-white border border-black/10 rounded-none p-8 transition-all hover:border-black/30 relative overflow-hidden;
   }
   .card-dark {
-    @apply bg-black text-white rounded-sm p-8 transition-all;
+    @apply bg-void text-white rounded-none p-8 transition-all;
   }
 
   .earmark-tag {
-    @apply inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-mint font-bold;
+    @apply inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-void font-bold;
   }
   
   /* Section Background Alternation */

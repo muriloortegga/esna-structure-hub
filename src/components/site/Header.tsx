@@ -29,17 +29,18 @@ export default function Header() {
       {!scrolled && (
         <div className="announcement-bar">
           <span className="flex items-center gap-2">
-            <span className="bg-mint text-depth px-1.5 py-0.5 rounded-sm text-[9px] font-bold">NEW</span>
+            <span className="bg-white text-void px-1.5 py-0.5 rounded-none text-[9px] font-bold">NEW</span>
             ESNA 2025 — Construindo sistemas de engenharia integrados de alta performance →
           </span>
         </div>
       )}
 
       {/* NAV BAR */}
-      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-void/80 backdrop-blur-md border-b border-mint/20" : "bg-transparent"}`}>
-        <div className="container-x flex items-center justify-between h-[52px]">
+      <header className={`w-full transition-all duration-300 ${scrolled ? "bg-void border-b border-white/10" : "bg-void"}`}>
+        <div className="container-x flex items-center justify-between h-[60px]">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-display font-bold text-[20px] tracking-widest text-white uppercase">ESNA</span>
+            <span className="font-display font-medium text-[20px] tracking-tight text-white uppercase">g</span>
+            <span className="font-sans text-[14px] text-white ml-2">Palantir Technologies</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-8">
@@ -48,7 +49,7 @@ export default function Header() {
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `text-nav transition-all duration-200 hover:text-white ${isActive ? "text-mint font-bold" : "text-slate"}`
+                  `text-nav transition-all duration-200 hover:text-white ${isActive ? "text-white font-bold" : "text-slate"}`
                 }
               >
                 {l.label}
@@ -59,7 +60,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link
               to="/contato"
-              className="hidden md:inline-flex btn-palantir-primary !py-2 !px-4 text-[11px]"
+              className="hidden md:inline-flex border border-white text-white hover:bg-white hover:text-void transition-colors !py-2 !px-4 text-[11px] font-mono uppercase tracking-widest"
             >
               Falar com Especialista
             </Link>
@@ -76,14 +77,14 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-void/95 backdrop-blur-md border-t border-mint/20 h-screen overflow-y-auto">
+        <div className="md:hidden bg-void border-t border-white/10 h-screen overflow-y-auto">
           <div className="container-x py-10 flex flex-col gap-6">
             {links.map((l) => (
               <NavLink key={l.to} to={l.to} className="text-[24px] font-display text-white">
                 {l.label}
               </NavLink>
             ))}
-            <Link to="/contato" className="btn-palantir-primary inline-flex self-start mt-4">
+            <Link to="/contato" className="btn-palantir-primary bg-white text-void inline-flex self-start mt-4">
               Falar com Especialista
             </Link>
           </div>

@@ -8,30 +8,30 @@ const Index = () => {
   return (
     <Layout>
       {/* HERO SECTION */}
-      <section className="min-h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding">
+      <section className="min-h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-[60px]">
         <div className="absolute inset-0 z-0">
           <img
             src={hero}
             alt="ESNA Integrated Engineering"
-            className="w-full h-full object-cover opacity-30 grayscale"
+            className="w-full h-full object-cover opacity-20 grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-void/50" />
         </div>
 
         <div className="container-x relative z-10 pt-20">
           <div className="flex flex-col gap-6 max-w-4xl">
 
             <h1 className="text-display text-white animate-reveal [animation-delay:200ms]">
-              Construindo a Infraestrutura que Sustenta <span className="text-gray-400 italic">Grandes Operações</span>.
+              Construindo a Infraestrutura que Sustenta <span className="text-gray-400">Grandes Operações</span>.
             </h1>
             <p className="text-h1 text-gray-400 animate-reveal [animation-delay:400ms] max-w-2xl">
               Projetamos, estruturamos e executamos sistemas complexos onde a precisão técnica encontra a eficiência operacional absoluta.
             </p>
             <div className="flex flex-wrap gap-4 mt-8 animate-reveal [animation-delay:600ms]">
-              <Link to="/solucoes" className="btn-palantir-primary px-10">
+              <Link to="/solucoes" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-10">
                 Começar Projeto
               </Link>
-              <Link to="/projetos" className="btn-palantir-ghost text-white border-white/20 hover:bg-white/10 px-10">
+              <Link to="/projetos" className="border border-white text-white hover:bg-white hover:text-void px-10 py-3 text-[12px] font-mono uppercase tracking-widest transition-all">
                 Ver Impacto
               </Link>
             </div>
@@ -46,7 +46,7 @@ const Index = () => {
             { label: "↳ Unidade 03", value: "Infra" },
             { label: "↳ Unidade 04", value: "Gestão" },
           ].map((s) => (
-            <div key={s.value} className="flex flex-col gap-2 border-t border-white/10 pt-6">
+            <div key={s.value} className="flex flex-col gap-2 border-t border-white/20 pt-6">
               <span className="text-caption text-gray-500">{s.label}</span>
               <span className="text-h2 text-white">{s.value}</span>
             </div>
@@ -68,13 +68,13 @@ const Index = () => {
               Não executamos apenas tarefas avulsas. Entregamos estrutura. A ESNA atua na integração total de disciplinas, transformando complexidade em vantagem operacional para grandes indústrias.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
                 <span className="text-h2 text-void">+10 Anos</span>
-                <p className="text-[13px] text-gray-500 uppercase tracking-widest">Experiência Industrial</p>
+                <p className="text-[11px] text-gray-500 uppercase tracking-widest font-mono font-bold">Experiência Industrial</p>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
                 <span className="text-h2 text-void">+50 Projetos</span>
-                <p className="text-[13px] text-gray-500 uppercase tracking-widest">Entregues com Precisão</p>
+                <p className="text-[11px] text-gray-500 uppercase tracking-widest font-mono font-bold">Entregues com Precisão</p>
               </div>
             </div>
             <Link to="/sobre" className="btn-palantir-arrow self-start mt-4">
@@ -106,13 +106,13 @@ const Index = () => {
             ].map((s) => (
               <div key={s.t} className="card-surface flex flex-col h-full hover:bg-white transition-colors group">
                 <div className="flex items-center justify-between mb-12">
-                  <span className="earmark-tag bg-void text-white">{s.tag}</span>
-                  <div className="h-4 w-4 border-r border-t border-void/20 group-hover:border-void transition-colors" />
+                  <span className="earmark-tag bg-void text-white px-2 py-1">{s.tag}</span>
+                  <div className="h-4 w-4 border-r border-t border-black/20 group-hover:border-black transition-colors" />
                 </div>
                 <h3 className="text-h1 text-void mb-4">{s.t}</h3>
                 <p className="text-body text-gray-600 mb-8 flex-grow">{s.d}</p>
-                <div className="h-px w-full bg-border-sutil mb-6" />
-                <span className="text-[11px] font-bold text-void uppercase tracking-widest">Explorar Solução</span>
+                <div className="h-px w-full bg-black/10 mb-6" />
+                <span className="text-[11px] font-bold text-void uppercase tracking-widest group-hover:underline">Explorar Solução</span>
               </div>
             ))}
           </div>
@@ -138,7 +138,7 @@ const Index = () => {
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-4">
-                    <span className="earmark-tag border border-void/10">{p.type}</span>
+                    <span className="earmark-tag border border-black/10 px-2 py-1">{p.type}</span>
                     <span className="text-caption text-gray-400">Case Study 2024</span>
                   </div>
                   <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
@@ -155,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* CLIENTS (SUBTLE) */}
-      <section className="section-surface border-y border-border-sutil">
+      <section className="section-surface border-y border-black/10">
         <div className="container-x py-12 flex flex-wrap items-center justify-between gap-12 opacity-50 grayscale">
           {["Schuler", "Santander", "Petribu", "FVO", "Ypê"].map(c => (
             <span key={c} className="text-h2 text-void font-bold tracking-tightest">{c}</span>
@@ -168,13 +168,13 @@ const Index = () => {
         <div className="container-x flex flex-col items-center gap-10">
 
           <h2 className="text-display text-white max-w-4xl">
-            Pronto para reconstruir sua <span className="text-gray-400 italic">Vantagem Operacional</span>?
+            Pronto para reconstruir sua <span className="text-gray-400">Vantagem Operacional</span>?
           </h2>
           <div className="flex gap-6">
             <Link to="/contato" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-12">
               Solicitar Demo
             </Link>
-            <Link to="/solucoes" className="btn-palantir-ghost text-white border-white/20 px-12">
+            <Link to="/solucoes" className="border border-white text-white hover:bg-white hover:text-void px-12 py-3 text-[12px] font-mono uppercase tracking-widest transition-all">
               Ver Ofertas
             </Link>
           </div>
