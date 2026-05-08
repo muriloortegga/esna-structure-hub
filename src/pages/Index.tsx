@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { Zap, Cpu, Building2, BarChart } from "lucide-react";
 import Layout from "@/components/site/Layout";
 import heroImage from "@/assets/hero-structure.jpg";
@@ -8,20 +9,47 @@ import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
 import { projects } from "@/data/projects";
 
+// Import all files from the hero-bg directory automatically
+const heroBackgrounds = import.meta.glob('@/assets/hero-bg/*.{gif,mp4,webm,jpg,png}', { eager: true, query: '?url', import: 'default' });
+const bgUrls = Object.values(heroBackgrounds) as string[];
+
 const Index = () => {
+  const [currentBg, setCurrentBg] = useState(0);
+
+  useEffect(() => {
+    if (bgUrls.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % bgUrls.length);
+    }, 5000); // Change background every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Layout>
       {/* HERO SECTION */}
       <section className="h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-0">
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-            src="https://videos.pexels.com/video-files/3201509/3201509-hd_1920_1080_25fps.mp4"
-          />
+        <div className="absolute inset-0 z-0 bg-black">
+          {bgUrls.length > 0 ? (
+            bgUrls.map((url, index) => (
+              <img
+                key={url}
+                src={url}
+                alt="ESNA Background"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  index === currentBg ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))
+          ) : (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              src="https://videos.pexels.com/video-files/3201509/3201509-hd_1920_1080_25fps.mp4"
+            />
+          )}
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
