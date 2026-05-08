@@ -14,7 +14,7 @@ const heroBackgrounds = import.meta.glob('../assets/hero-bg/*.{gif,mp4,webm,jpg,
 const bgUrls = Object.values(heroBackgrounds) as string[];
 
 // Import client logos
-const clientFiles = import.meta.glob('../assets/clients/*.{png,svg,jpg,jpeg}', { eager: true, query: '?url', import: 'default' });
+const clientFiles = import.meta.glob('../assets/clients/*.{png,svg,jpg,jpeg,webp}', { eager: true, import: 'default' });
 const clientLogos = Object.values(clientFiles) as string[];
 
 const Index = () => {
@@ -110,21 +110,17 @@ const Index = () => {
       </section>
 
       {/* FLOATING CLIENTS TICKER */}
-      <div className="w-full overflow-hidden bg-white py-12 border-b border-black/5">
-        <div className="flex w-[200%] animate-marquee">
+      <div className="w-full overflow-hidden bg-white py-12 flex">
+        <div className="flex w-max animate-marquee gap-16 items-center pr-16">
           {clientLogos.length > 0 ? (
-            [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
-              <div key={i} className="flex-1 flex justify-center items-center px-8">
-                <img src={logo} alt="Client Logo" className="max-h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity grayscale-0" />
-              </div>
+            [...clientLogos, ...clientLogos].map((logo, i) => (
+              <img key={i} src={logo} alt="Client Logo" className="max-h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity grayscale-0" />
             ))
           ) : (
             [...clients, ...clients].map((client, i) => (
-              <div key={i} className="flex-1 flex justify-center items-center px-8">
-                <span className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
-                  {client}
-                </span>
-              </div>
+              <span key={i} className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
+                {client}
+              </span>
             ))
           )}
         </div>
