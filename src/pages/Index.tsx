@@ -9,8 +9,8 @@ import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.jpg";
 import { projects } from "@/data/projects";
 
-// Import all files from the hero-bg directory automatically
-const heroBackgrounds = import.meta.glob('@/assets/hero-bg/*.{gif,mp4,webm,jpg,png}', { eager: true, query: '?url', import: 'default' });
+// Import all files from the hero-bg directory automatically using relative path for better Vite compatibility
+const heroBackgrounds = import.meta.glob('../assets/hero-bg/*.{gif,mp4,webm,jpg,png}', { eager: true, query: '?url', import: 'default' });
 const bgUrls = Object.values(heroBackgrounds) as string[];
 
 const Index = () => {
@@ -30,16 +30,34 @@ const Index = () => {
       <section className="h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-0">
         <div className="absolute inset-0 z-0 bg-black">
           {bgUrls.length > 0 ? (
-            bgUrls.map((url, index) => (
-              <img
-                key={url}
-                src={url}
-                alt="ESNA Background"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                  index === currentBg ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            ))
+            bgUrls.map((url, index) => {
+              // Extract the base URL without query parameters to check extension
+              const cleanUrl = url.split('?')[0].toLowerCase();
+              const isVideo = cleanUrl.endsWith('.mp4') || cleanUrl.endsWith('.webm');
+              
+              return isVideo ? (
+                <video
+                  key={url}
+                  src={url}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === currentBg ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ) : (
+                <img
+                  key={url}
+                  src={url}
+                  alt="ESNA Background"
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === currentBg ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              );
+            })
           ) : (
             <video
               autoPlay
