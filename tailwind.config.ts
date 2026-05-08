@@ -27,21 +27,21 @@ export default {
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
         // Design System Specific
-        void: "#1A1C1E",
+        void: "#101010",
         depth: "#1E293B",
-        pale: "#F2F4F5",
+        pale: "#F8FAFC",
         surf2: "#E2E8F0",
         white: {
-          DEFAULT: "#F2F4F5",
-          pure: "#FFFFFF" // Keeping pure white just in case something strictly needs #FFF
+          DEFAULT: "#FFFFFF",
+          pure: "#FFFFFF"
         },
         slate: "#64748B",
-        black: "#1A1C1E",
+        black: "#000000",
         "border-sutil": "#E2E8F0",
         "border-emphasis": "#1E293B",
-        surface: "#F2F4F5",
-        mint: "#1A1C1E", // Changing mint to black to match the stark design
-        highlight: "#1A1C1E"
+        surface: "#FFFFFF",
+        mint: "#000000", // Changing mint to black to match the stark design
+        highlight: "#101010"
       },
       borderRadius: {
         none: "0",
@@ -55,11 +55,6 @@ export default {
         display: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         ui: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"SF Mono"', '"Courier New"', 'monospace'],
-      },
-      letterSpacing: {
-        tighter: '-0.075em',
-        tight: '-0.04em',
-        normal: '-0.015em',
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',

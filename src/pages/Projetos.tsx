@@ -11,35 +11,33 @@ export default function Projetos() {
         subtitle="Cada projeto é resolvido como um sistema técnico integrado. Aqui estão os marcos da nossa atuação industrial."
       />
       <section className="section-white section-padding">
-        <div className="container-x grid md:grid-cols-2 gap-16 md:gap-x-24 md:gap-y-48">
+        <div className="container-x grid md:grid-cols-2 gap-16 md:gap-x-24 md:gap-y-40">
           {projects.map((p, i) => (
             <Link
               key={p.slug}
               to={`/projetos/${p.slug}`}
-              className={`group flex flex-col gap-10 ${i % 2 === 1 ? "md:mt-48" : ""}`}
+              className={`group flex flex-col gap-8 ${i % 2 === 1 ? "md:mt-48" : ""}`}
             >
-              <div className="relative overflow-hidden aspect-[16/10] bg-void border border-black/5">
+              <div className="card-surface p-0 overflow-hidden aspect-[16/10] bg-void">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000"
+                  className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-void/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
-              <div className="flex flex-col gap-6">
-                <div className="flex items-center gap-6">
-                  <span className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em] uppercase">{p.type}</span>
-                  <div className="h-px flex-grow bg-black/5" />
-                  <span className="text-[10px] font-mono font-bold text-void/30 tracking-[0.1em]">2024</span>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <span className="earmark-tag border border-void/10">{p.type}</span>
+                  <span className="text-caption text-gray-400">Impact Study // 2024</span>
                 </div>
-                <h3 className="text-[32px] md:text-[48px] text-void group-hover:text-slate transition-colors tracking-tighter leading-tight font-medium">
-                  <span className="font-light">{p.name.split(' ').slice(0, -1).join(' ')}</span> <span className="font-bold">{p.name.split(' ').slice(-1)}</span>
+                <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
+                  {p.name}
                 </h3>
-                <p className="text-[16px] md:text-[20px] text-gray-500 max-w-xl leading-relaxed font-light tracking-tight">
+                <p className="text-body text-gray-600 max-w-xl leading-relaxed">
                   {p.description}
                 </p>
-                <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-void/30 group-hover:text-void group-hover:pl-2 transition-all">
+                <span className="text-nav text-void mt-4 group-hover:translate-x-2 transition-transform">
                   Ler Estudo de Impacto →
                 </span>
               </div>

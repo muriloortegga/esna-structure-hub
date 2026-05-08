@@ -35,19 +35,19 @@ export default function Header() {
       )}
 
       {/* NAV BAR */}
-      <header className={`w-full transition-all duration-300 ${scrolled ? 'bg-void/90 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'}`}>
+      <header className={`w-full transition-all duration-300 bg-black/10 backdrop-blur-xl border-b border-white/10`}>
         <div className="container-x flex items-center justify-between h-[60px]">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-display font-medium text-[20px] tracking-tighter text-white uppercase">ESNA</span>
+            <span className="font-display font-medium text-[20px] tracking-tight text-white uppercase">ESNA</span>
           </Link>
           
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `text-[12px] font-sans font-bold uppercase tracking-widest transition-all duration-200 hover:text-white ${isActive ? "text-white" : "text-white/50"}`
+                  `text-[14px] font-sans transition-all duration-200 hover:text-white ${isActive ? "text-white font-bold" : "text-gray-300"}`
                 }
               >
                 {l.label}
@@ -55,71 +55,42 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <Link
               to="/contato"
-              className="hidden md:inline-flex bg-white text-void hover:bg-gray-200 transition-colors py-2 px-6 text-[11px] font-mono font-bold uppercase tracking-widest"
+              className="hidden md:inline-flex bg-white text-void hover:bg-gray-200 transition-colors !py-2 !px-6 text-[14px] font-sans font-medium"
             >
               Comece agora
             </Link>
-            <button aria-label="Search" className="hidden md:flex p-2 text-white/50 hover:text-white transition-colors">
-              <Search size={18} />
+            <button aria-label="Search" className="hidden md:flex p-2 text-white hover:bg-white/10 transition-colors">
+              <Search size={20} />
             </button>
             <button
               aria-label="Menu"
               onClick={() => setOpen((o) => !o)}
-              className="p-2 text-white/50 hover:text-white transition-colors"
+              className="p-2 text-white hover:bg-white/10 transition-colors"
             >
-              {open ? <X size={22} /> : <Menu size={22} />}
+              {open ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </header>
 
       {/* MOBILE MENU */}
-      <div 
-        className={`md:hidden fixed inset-0 z-[60] bg-void transition-all duration-500 ease-in-out ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-      >
-        <div className="container-x h-full flex flex-col justify-between py-12">
-          <div className="flex justify-between items-center h-[60px]">
-            <Link to="/" onClick={() => setOpen(false)} className="font-display font-medium text-[20px] tracking-tighter text-white uppercase">ESNA</Link>
-            <button onClick={() => setOpen(false)} className="p-2 text-white">
-              <X size={24} />
-            </button>
-          </div>
-
-          <nav className="flex flex-col gap-8">
-            {links.map((l, i) => (
-              <NavLink 
-                key={l.to} 
-                to={l.to} 
-                onClick={() => setOpen(false)}
-                className={({ isActive }) => 
-                  `text-[40px] font-display leading-tight tracking-tighter transition-all duration-300 ${isActive ? "text-white" : "text-white/30 hover:text-white"}`
-                }
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
+      {open && (
+        <div className="md:hidden bg-void border-t border-white/10 h-screen overflow-y-auto">
+          <div className="container-x py-10 flex flex-col gap-6">
+            {links.map((l) => (
+              <NavLink key={l.to} to={l.to} className="text-[24px] font-display text-white">
                 {l.label}
               </NavLink>
             ))}
-          </nav>
-
-          <div className="flex flex-col gap-10">
-            <Link 
-              to="/contato" 
-              onClick={() => setOpen(false)}
-              className="bg-white text-void py-5 px-8 text-center text-[12px] font-mono font-bold uppercase tracking-[0.2em]"
-            >
+            <Link to="/contato" className="btn-esna-primary bg-white text-void inline-flex self-start mt-4">
               Comece agora
             </Link>
-            <div className="flex gap-8 text-[10px] font-mono font-bold text-white/30 uppercase tracking-[0.3em]">
-              <span>LinkedIn</span>
-              <span>Instagram</span>
-              <span>Youtube</span>
-            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
