@@ -13,6 +13,10 @@ import { projects } from "@/data/projects";
 const heroBackgrounds = import.meta.glob('../assets/hero-bg/*.{gif,mp4,webm,jpg,png}', { eager: true, query: '?url', import: 'default' });
 const bgUrls = Object.values(heroBackgrounds) as string[];
 
+// Import client logos
+const clientFiles = import.meta.glob('../assets/clients/*.{png,svg,jpg,jpeg}', { eager: true, query: '?url', import: 'default' });
+const clientLogos = Object.values(clientFiles) as string[];
+
 const Index = () => {
   const [currentBg, setCurrentBg] = useState(0);
 
@@ -24,7 +28,7 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Clients list for ticker
+  // Clients list for ticker fallback
   const clients = ["Schuler", "Santander", "Petribu", "FVO", "Ypê", "Ambev", "BRF", "Gerdau"];
 
   return (
@@ -108,13 +112,21 @@ const Index = () => {
       {/* FLOATING CLIENTS TICKER */}
       <div className="w-full overflow-hidden bg-white py-12 border-b border-black/5">
         <div className="flex w-[200%] animate-marquee">
-          {[...clients, ...clients].map((client, i) => (
-            <div key={i} className="flex-1 flex justify-center items-center px-8">
-              <span className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
-                {client}
-              </span>
-            </div>
-          ))}
+          {clientLogos.length > 0 ? (
+            [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
+              <div key={i} className="flex-1 flex justify-center items-center px-8">
+                <img src={logo} alt="Client Logo" className="max-h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity grayscale-0" />
+              </div>
+            ))
+          ) : (
+            [...clients, ...clients].map((client, i) => (
+              <div key={i} className="flex-1 flex justify-center items-center px-8">
+                <span className="text-h2 text-void font-bold tracking-tighter uppercase opacity-80 hover:opacity-100 hover:text-blue-600 transition-all cursor-default">
+                  {client}
+                </span>
+              </div>
+            ))
+          )}
         </div>
       </div>
 
