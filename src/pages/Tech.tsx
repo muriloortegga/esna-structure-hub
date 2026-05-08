@@ -10,18 +10,20 @@ export default function Tech() {
       />
 
       {/* VISÃO DA FRENTE */}
-      <section className="section-padding section-white border-b border-black/10">
+      <section className="section-padding section-white border-b border-black/5">
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-void text-white self-start px-2 py-1">VISÃO DA FRENTE</span>
-            <h2 className="text-display text-void leading-tight">Tecnologia com função estratégica.</h2>
+            <h2 className="text-display text-void leading-tight tracking-tighter">
+              <span className="font-light">Tecnologia com</span> <span className="font-bold">função estratégica.</span>
+            </h2>
           </div>
-          <div className="md:col-span-7 flex flex-col gap-6 pt-4">
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              A frente Tech da ESNA conecta engenharia e tecnologia para transformar processos em sistemas mais inteligentes, organizados e controláveis.
+          <div className="md:col-span-7 flex flex-col gap-6 pt-4 text-h2 text-gray-600 font-light tracking-tight leading-relaxed">
+            <p>
+              A frente Tech da ESNA conecta engenharia e tecnologia para transformar processos em sistemas <span className="font-medium text-void">mais inteligentes, organizados e controláveis.</span>
             </p>
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              Nossa atuação integra automação, monitoramento e lógica operacional em soluções claras e funcionais.
+            <p>
+              Nossa atuação integra automação, monitoramento e <span className="font-medium text-void">lógica operacional</span> em soluções claras e funcionais para a Indústria 4.0.
             </p>
           </div>
         </div>
@@ -56,11 +58,13 @@ export default function Tech() {
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-white text-void self-start px-2 py-1">DIFERENCIAL</span>
-            <h2 className="text-display text-white leading-tight">Tecnologia orientada por estrutura.</h2>
+            <h2 className="text-display text-white leading-tight tracking-tighter">
+              <span className="font-light">Tecnologia orientada por</span> <span className="font-bold">estrutura.</span>
+            </h2>
           </div>
           <div className="md:col-span-7 flex flex-col pt-4">
-            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans tracking-tight">
-              Desenvolvemos soluções tecnológicas que simplificam operações complexas e ampliam a capacidade de gestão e controle.
+            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans font-light tracking-tight">
+              Desenvolvemos soluções tecnológicas que simplificam operações complexas e ampliam a capacidade de <span className="font-medium text-white">gestão e controle operacional.</span>
             </p>
           </div>
         </div>

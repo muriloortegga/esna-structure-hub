@@ -10,15 +10,18 @@ export default function Gestao() {
       />
 
       {/* VISÃO DA FRENTE */}
-      <section className="section-padding section-white border-b border-black/10">
+      <section className="section-padding section-white border-b border-black/5">
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-void text-white self-start px-2 py-1">VISÃO DA FRENTE</span>
-            <h2 className="text-display text-void leading-tight">Método como parte da entrega.</h2>
+            <h2 className="text-display text-void leading-tight tracking-tighter">
+              <span className="font-light">Método como</span> <br />
+              <span className="font-bold">parte da entrega.</span>
+            </h2>
           </div>
-          <div className="md:col-span-7 flex flex-col gap-6 pt-4">
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              A frente de Gestão da ESNA atua na coordenação estratégica de processos, equipes e operações, garantindo clareza, previsibilidade e alinhamento entre todas as etapas do projeto.
+          <div className="md:col-span-7 flex flex-col gap-6 pt-4 text-h2 text-gray-600 font-light tracking-tight leading-relaxed">
+            <p>
+              A frente de Gestão da ESNA atua na <span className="font-medium text-void">coordenação estratégica</span> de processos, equipes e operações, garantindo clareza, previsibilidade e alinhamento entre todas as etapas do projeto.
             </p>
           </div>
         </div>
@@ -53,11 +56,14 @@ export default function Gestao() {
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-white text-void self-start px-2 py-1">DIFERENCIAL</span>
-            <h2 className="text-display text-white leading-tight">Clareza para operações mais eficientes.</h2>
+            <h2 className="text-display text-white leading-tight tracking-tighter">
+              <span className="font-light">Clareza para</span> <br />
+              <span className="font-bold">operações eficientes.</span>
+            </h2>
           </div>
           <div className="md:col-span-7 flex flex-col pt-4">
-            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans tracking-tight">
-              Organizamos fluxos, processos e decisões para transformar complexidade em execução consistente.
+            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans font-light tracking-tight">
+              Organizamos fluxos, processos e decisões para transformar complexidade em <span className="font-medium text-white">execução consistente e estruturada.</span>
             </p>
           </div>
         </div>

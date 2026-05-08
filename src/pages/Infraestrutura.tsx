@@ -10,18 +10,20 @@ export default function Infraestrutura() {
       />
 
       {/* VISÃO DA FRENTE */}
-      <section className="section-padding section-white border-b border-black/10">
+      <section className="section-padding section-white border-b border-black/5">
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-void text-white self-start px-2 py-1">VISÃO DA FRENTE</span>
-            <h2 className="text-display text-void leading-tight">Base sólida para operações complexas.</h2>
+            <h2 className="text-display text-void leading-tight tracking-tighter">
+              <span className="font-light">Base sólida para</span> <span className="font-bold">operações complexas.</span>
+            </h2>
           </div>
-          <div className="md:col-span-7 flex flex-col gap-6 pt-4">
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              A frente de Infraestrutura da ESNA atua no desenvolvimento e execução de soluções essenciais para o funcionamento eficiente de operações industriais, corporativas e técnicas.
+          <div className="md:col-span-7 flex flex-col gap-6 pt-4 text-h2 text-gray-600 font-light tracking-tight leading-relaxed">
+            <p>
+              A frente de Infraestrutura da ESNA atua no desenvolvimento e execução de soluções essenciais para o <span className="font-medium text-void">funcionamento eficiente</span> de operações industriais, corporativas e técnicas.
             </p>
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              Nossa abordagem combina organização, planejamento e integração para garantir estruturas preparadas para crescer com segurança, estabilidade e desempenho.
+            <p>
+              Nossa abordagem combina <span className="font-medium text-void">organização, planejamento e integração</span> para garantir estruturas preparadas para crescer com segurança, estabilidade e desempenho.
             </p>
           </div>
         </div>
@@ -56,11 +58,13 @@ export default function Infraestrutura() {
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-white text-void self-start px-2 py-1">DIFERENCIAL</span>
-            <h2 className="text-display text-white leading-tight">Estrutura como inteligência operacional.</h2>
+            <h2 className="text-display text-white leading-tight tracking-tighter">
+              <span className="font-light">Estrutura como</span> <span className="font-bold">inteligência operacional.</span>
+            </h2>
           </div>
           <div className="md:col-span-7 flex flex-col pt-4">
-            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans tracking-tight">
-              Mais do que construir, organizamos sistemas capazes de sustentar operações com eficiência, previsibilidade e continuidade.
+            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans font-light tracking-tight">
+              Mais do que construir, organizamos sistemas capazes de sustentar operações com <span className="font-medium text-white">eficiência, previsibilidade e continuidade.</span>
             </p>
           </div>
         </div>

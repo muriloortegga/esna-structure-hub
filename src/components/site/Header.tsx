@@ -35,19 +35,19 @@ export default function Header() {
       )}
 
       {/* NAV BAR */}
-      <header className={`w-full transition-all duration-300 bg-black/10 backdrop-blur-xl border-b border-white/10`}>
+      <header className={`w-full transition-all duration-300 ${scrolled ? 'bg-void/90 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'}`}>
         <div className="container-x flex items-center justify-between h-[60px]">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="font-display font-medium text-[20px] tracking-tight text-white uppercase">ESNA</span>
+            <span className="font-display font-medium text-[20px] tracking-tighter text-white uppercase">ESNA</span>
           </Link>
           
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `text-[14px] font-sans transition-all duration-200 hover:text-white ${isActive ? "text-white font-bold" : "text-gray-300"}`
+                  `text-[12px] font-sans font-bold uppercase tracking-widest transition-all duration-200 hover:text-white ${isActive ? "text-white" : "text-white/50"}`
                 }
               >
                 {l.label}
@@ -55,22 +55,22 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <Link
               to="/contato"
-              className="hidden md:inline-flex bg-white text-void hover:bg-gray-200 transition-colors !py-2 !px-6 text-[14px] font-sans font-medium"
+              className="hidden md:inline-flex bg-white text-void hover:bg-gray-200 transition-colors py-2 px-6 text-[11px] font-mono font-bold uppercase tracking-widest"
             >
               Comece agora
             </Link>
-            <button aria-label="Search" className="hidden md:flex p-2 text-white hover:bg-white/10 transition-colors">
-              <Search size={20} />
+            <button aria-label="Search" className="hidden md:flex p-2 text-white/50 hover:text-white transition-colors">
+              <Search size={18} />
             </button>
             <button
               aria-label="Menu"
               onClick={() => setOpen((o) => !o)}
-              className="p-2 text-white hover:bg-white/10 transition-colors"
+              className="p-2 text-white/50 hover:text-white transition-colors"
             >
-              {open ? <X size={24} /> : <Menu size={24} />}
+              {open ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>

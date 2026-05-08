@@ -38,15 +38,16 @@ export default function Sobre() {
       <section className="section-white section-padding">
         <div className="container-x grid md:grid-cols-2 gap-20 items-start">
           <div className="flex flex-col gap-6">
-
-            <h2 className="text-display text-void leading-tight">Engenharia para projetos integrados.</h2>
+            <h2 className="text-display text-void leading-tight tracking-tighter">
+              <span className="font-light">Engenharia para</span> <span className="font-bold">projetos integrados.</span>
+            </h2>
           </div>
-          <div className="flex flex-col gap-8 text-body text-gray-600">
+          <div className="flex flex-col gap-8 text-body text-gray-600 font-light tracking-tight">
             <p>
-              A ESNA é uma empresa de engenharia especializada em soluções integradas. Atuamos organizando e executando projetos que exigem precisão técnica, visão sistêmica e capacidade de coordenação entre múltiplas disciplinas.
+              A ESNA é uma empresa de engenharia especializada em <span className="font-medium text-void">soluções integradas.</span> Atuamos organizando e executando projetos que exigem precisão técnica, visão sistêmica e capacidade de coordenação entre múltiplas disciplinas.
             </p>
             <p>
-              Nosso trabalho parte da organização. Entendemos o projeto como um sistema — e estruturamos cada etapa para garantir eficiência, controle e qualidade absoluta em cada entrega industrial.
+              Nosso trabalho parte da <span className="font-medium text-void">organização.</span> Entendemos o projeto como um sistema — e estruturamos cada etapa para garantir eficiência, controle e qualidade absoluta em cada entrega industrial.
             </p>
           </div>
         </div>
@@ -96,7 +97,7 @@ export default function Sobre() {
       </section>
 
       {/* STATS (WHITE) */}
-      <section className="section-white section-padding">
+      <section className="section-white section-padding border-t border-black/5">
         <div className="container-x grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {[
             { v: "+10", l: "Anos de atuação" },
@@ -105,8 +106,8 @@ export default function Sobre() {
             { v: "100%", l: "Comprometimento" },
           ].map((s) => (
             <div key={s.l} className="flex flex-col gap-2">
-              <span className="text-display text-void font-bold">{s.v}</span>
-              <span className="text-caption text-gray-500">{s.l}</span>
+              <span className="text-display text-void tracking-tighter font-bold">{s.v}</span>
+              <span className="text-caption text-gray-500 font-mono tracking-widest">{s.l}</span>
             </div>
           ))}
         </div>

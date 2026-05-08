@@ -31,14 +31,14 @@ export default function Projetos() {
                   <span className="earmark-tag border border-void/10">{p.type}</span>
                   <span className="text-caption text-gray-400">Impact Study // 2024</span>
                 </div>
-                <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1">
-                  {p.name}
+                <h3 className="text-display text-void group-hover:underline underline-offset-8 decoration-1 tracking-tighter">
+                  <span className="font-light">{p.name.split(' ').slice(0, -1).join(' ')}</span> <span className="font-bold">{p.name.split(' ').slice(-1)}</span>
                 </h3>
-                <p className="text-body text-gray-600 max-w-xl leading-relaxed">
+                <p className="text-body text-gray-600 max-w-xl leading-relaxed font-light tracking-tight">
                   {p.description}
                 </p>
-                <span className="text-nav text-void mt-4 group-hover:translate-x-2 transition-transform">
-                  Ler Estudo de Impacto →
+                <span className="text-nav text-void mt-4 group-hover:translate-x-2 transition-transform font-mono tracking-widest font-bold">
+                  LER ESTUDO DE IMPACTO →
                 </span>
               </div>
             </Link>

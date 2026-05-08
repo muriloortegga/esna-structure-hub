@@ -39,66 +39,66 @@ export default function Contato() {
       />
       <section className="section-white section-padding">
         <div className="container-x grid md:grid-cols-12 gap-16 md:gap-24">
-          <form onSubmit={onSubmit} className="md:col-span-7 flex flex-col gap-10">
+          <form onSubmit={onSubmit} className="md:col-span-7 flex flex-col gap-12">
             {[
-              { name: "nome", label: "Nome completo", type: "text" },
-              { name: "empresa", label: "Empresa / Organização", type: "text" },
-              { name: "email", label: "E-mail corporativo", type: "email" },
+              { name: "nome", label: "NOME COMPLETO", type: "text" },
+              { name: "empresa", label: "EMPRESA / ORGANIZAÇÃO", type: "text" },
+              { name: "email", label: "E-MAIL CORPORATIVO", type: "email" },
             ].map((f) => (
-              <div key={f.name} className="flex flex-col gap-4">
-                <label className="text-caption text-gray-500">
+              <div key={f.name} className="flex flex-col gap-3">
+                <label className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em] uppercase">
                   {f.label}
                 </label>
                 <input
                   name={f.name}
                   type={f.type}
                   required
-                  className="w-full bg-surface border border-border-sutil rounded-sm px-6 py-4 text-h2 text-void focus:border-void outline-none transition-all"
+                  className="w-full bg-transparent border-b border-black/10 py-4 text-h2 text-void focus:border-void outline-none transition-all font-light tracking-tight"
                 />
               </div>
             ))}
-            <div className="flex flex-col gap-4">
-              <label className="text-caption text-gray-500">
-                Mensagem / Descritivo do Desafio
+            <div className="flex flex-col gap-3">
+              <label className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em] uppercase">
+                MENSAGEM / DESCRITIVO DO DESAFIO
               </label>
               <textarea
                 name="mensagem"
-                rows={5}
+                rows={4}
                 required
-                className="w-full bg-surface border border-border-sutil rounded-sm px-6 py-4 text-h2 text-void focus:border-void outline-none transition-all resize-none"
+                className="w-full bg-transparent border-b border-black/10 py-4 text-h2 text-void focus:border-void outline-none transition-all resize-none font-light tracking-tight"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="btn-palantir-primary self-start px-12 py-4"
+              className="btn-esna-primary self-start px-16 py-4 mt-4"
             >
               {loading ? "Processando…" : "Enviar Mensagem"}
             </button>
           </form>
 
-          <aside className="md:col-span-5 flex flex-col gap-16">
-            <div className="flex flex-col gap-8">
-              <span className="text-nav text-void border-l-2 border-void pl-4">Canais Diretos</span>
-              <ul className="flex flex-col gap-6 text-body text-gray-600">
-                <li className="flex items-center gap-4 group">
-                  <Mail size={18} className="text-void" /> 
-                  <span className="hover:text-void transition-colors cursor-pointer">leonardo.neres@esnaengenharia.com</span>
+          <aside className="md:col-span-5 flex flex-col gap-20">
+            <div className="flex flex-col gap-10">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.3em] text-void/30">Canais Diretos</span>
+              <ul className="flex flex-col gap-8 text-h2 text-void font-light tracking-tight">
+                <li className="flex flex-col gap-2 group">
+                  <span className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em]">E-MAIL</span>
+                  <span className="hover:text-slate transition-colors cursor-pointer truncate">leonardo.neres@esnaengenharia.com</span>
                 </li>
-                <li className="flex items-center gap-4 group">
-                  <Phone size={18} className="text-void" /> 
-                  <span className="hover:text-void transition-colors cursor-pointer">(13) 98123-6332</span>
+                <li className="flex flex-col gap-2 group">
+                  <span className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em]">TELEFONE</span>
+                  <span className="hover:text-slate transition-colors cursor-pointer">(13) 98123-6332</span>
                 </li>
-                <li className="flex items-center gap-4 group">
-                  <MapPin size={18} className="text-void" /> 
+                <li className="flex flex-col gap-2 group">
+                  <span className="text-[10px] font-mono font-bold text-void/40 tracking-[0.2em]">LOCALIZAÇÃO</span>
                   <span>Santos — São Paulo — Brasil</span>
                 </li>
               </ul>
             </div>
             
-            <div className="card-surface p-10 bg-surface/50 border-void/10">
-              <h3 className="text-h1 text-void mb-4">Atendimento técnico</h3>
-              <p className="text-body text-gray-500 leading-relaxed">
+            <div className="card-surface p-12 bg-pale border-black/5">
+              <h3 className="text-h1 text-void mb-6 tracking-tighter font-medium">Atendimento técnico</h3>
+              <p className="text-body text-gray-600 leading-relaxed font-light tracking-tight">
                 Para projetos em andamento, encaminhe diretamente ao time responsável pelo escopo contratado para agilizar o suporte e garantir a continuidade operacional.
               </p>
             </div>

@@ -10,18 +10,20 @@ export default function Energia() {
       />
 
       {/* VISÃO DA FRENTE */}
-      <section className="section-padding section-white border-b border-black/10">
+      <section className="section-padding section-white border-b border-black/5">
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-void text-white self-start px-2 py-1">VISÃO DA FRENTE</span>
-            <h2 className="text-display text-void leading-tight">Energia integrada à operação.</h2>
+            <h2 className="text-display text-void leading-tight tracking-tighter">
+              <span className="font-light">Energia integrada à</span> <span className="font-bold">operação.</span>
+            </h2>
           </div>
-          <div className="md:col-span-7 flex flex-col gap-6 pt-4">
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              A ESNA desenvolve soluções energéticas com foco em confiabilidade operacional, eficiência técnica e integração entre sistemas.
+          <div className="md:col-span-7 flex flex-col gap-6 pt-4 text-h2 text-gray-600 font-light tracking-tight leading-relaxed">
+            <p>
+              A ESNA desenvolve soluções energéticas com foco em <span className="font-medium text-void">confiabilidade operacional,</span> eficiência técnica e integração entre sistemas.
             </p>
-            <p className="text-[20px] md:text-[24px] text-gray-700 leading-relaxed font-sans tracking-tight">
-              Atuamos desde o planejamento até a implementação, garantindo desempenho consistente e alinhado às necessidades de cada operação.
+            <p>
+              Atuamos desde o planejamento até a implementação, garantindo <span className="font-medium text-void">desempenho consistente</span> e alinhado às necessidades de cada operação industrial complexa.
             </p>
           </div>
         </div>
@@ -56,11 +58,13 @@ export default function Energia() {
         <div className="container-x grid md:grid-cols-12 gap-12 md:gap-24 items-start">
           <div className="md:col-span-5 flex flex-col gap-6">
             <span className="earmark-tag bg-white text-void self-start px-2 py-1">DIFERENCIAL</span>
-            <h2 className="text-display text-white leading-tight">Precisão técnica aplicada à continuidade.</h2>
+            <h2 className="text-display text-white leading-tight tracking-tighter">
+              <span className="font-light">Precisão técnica aplicada à</span> <span className="font-bold">continuidade.</span>
+            </h2>
           </div>
           <div className="md:col-span-7 flex flex-col pt-4">
-            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans tracking-tight">
-              Projetamos sistemas energéticos preparados para operar com estabilidade, segurança e capacidade de adaptação.
+            <p className="text-[24px] md:text-[32px] text-gray-300 leading-relaxed font-sans font-light tracking-tight">
+              Projetamos sistemas energéticos preparados para operar com <span className="font-medium text-white">estabilidade, segurança</span> e capacidade de adaptação.
             </p>
           </div>
         </div>
