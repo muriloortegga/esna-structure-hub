@@ -29,17 +29,17 @@ export default {
         // Design System Specific
         void: "#1A1C1E",
         depth: "#1E293B",
-        pale: "#F8FAFC",
+        pale: "#F2F4F5",
         surf2: "#E2E8F0",
         white: {
-          DEFAULT: "#FFFFFF",
-          pure: "#FFFFFF"
+          DEFAULT: "#F2F4F5",
+          pure: "#FFFFFF" // Keeping pure white just in case something strictly needs #FFF
         },
         slate: "#64748B",
         black: "#1A1C1E",
         "border-sutil": "#E2E8F0",
         "border-emphasis": "#1E293B",
-        surface: "#FFFFFF",
+        surface: "#F2F4F5",
         mint: "#1A1C1E", // Changing mint to black to match the stark design
         highlight: "#1A1C1E"
       },
@@ -55,6 +55,11 @@ export default {
         display: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         ui: ['"Hilmar Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"SF Mono"', '"Courier New"', 'monospace'],
+      },
+      letterSpacing: {
+        tighter: '-0.075em',
+        tight: '-0.04em',
+        normal: '-0.015em',
       },
       boxShadow: {
         soft: 'var(--shadow-soft)',

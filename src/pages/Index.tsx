@@ -79,11 +79,11 @@ const Index = () => {
 
         <div className="container-x relative z-10 pt-32 flex flex-col items-center text-center">
           <div className="flex flex-col gap-6 max-w-5xl items-center">
-            <h1 className="text-[48px] md:text-[72px] leading-[1.1] font-sans font-medium tracking-tight text-white animate-reveal [animation-delay:200ms]">
-              Engenharia integrada para operações que exigem precisão.
+            <h1 className="text-[48px] md:text-[72px] leading-[1.05] font-sans tracking-tighter text-white animate-reveal [animation-delay:200ms]">
+              <span className="font-light">Engenharia integrada para</span> <span className="font-bold">operações</span> <span className="font-light">que exigem</span> <span className="font-bold">precisão.</span>
             </h1>
-            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans mb-8">
-              Infraestrutura, energia, tecnologia e gestão conectadas em soluções estruturadas para ambientes complexos.
+            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans tracking-tight mb-8">
+              <span className="font-light">Infraestrutura, energia, tecnologia e gestão</span> <span className="font-medium">conectadas em soluções estruturadas</span> <span className="font-light">para ambientes complexos.</span>
             </p>
             
             {/* CTA Buttons */}
@@ -121,14 +121,14 @@ const Index = () => {
         <div className="container-x grid md:grid-cols-2 gap-20 items-center">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-display text-void leading-tight">
-                Estrutura para resolver com eficiência.
+              <h2 className="text-display text-void leading-tight tracking-tighter">
+                <span className="font-light">Estrutura para</span> <span className="font-bold">resolver com eficiência.</span>
               </h2>
             </div>
-            <p className="text-body text-gray-600 max-w-xl">
-              A ESNA atua na integração entre diferentes disciplinas da engenharia, organizando processos, sistemas e operações com clareza técnica e visão estratégica.
+            <p className="text-body text-gray-600 max-w-xl font-light tracking-tight">
+              A ESNA atua na integração entre diferentes disciplinas da engenharia, <span className="font-bold text-void">organizando processos, sistemas e operações</span> com clareza técnica e visão estratégica.
               <br /><br />
-              Desenvolvemos soluções completas para empresas que exigem confiabilidade, precisão e capacidade de execução.
+              Desenvolvemos soluções completas para empresas que exigem <span className="font-bold text-void">confiabilidade, precisão e capacidade de execução.</span>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
               <div className="flex flex-col gap-2 border-t border-black/10 pt-4">
@@ -190,11 +190,11 @@ const Index = () => {
       {/* BLOCO DIFERENCIAL */}
       <section className="section-void section-padding text-center">
         <div className="container-x flex flex-col items-center gap-10">
-          <h2 className="text-display text-white max-w-4xl">
-            Integração como método.
+          <h2 className="text-display text-white max-w-4xl tracking-tighter">
+            <span className="font-light">Integração como</span> <span className="font-bold">método.</span>
           </h2>
           <p className="text-[20px] md:text-[24px] text-gray-300 max-w-3xl font-sans font-light tracking-tight">
-            A capacidade de integrar diferentes áreas da engenharia permite à ESNA desenvolver soluções mais eficientes, reduzir ruídos operacionais e garantir maior controle em todas as etapas do projeto.
+            A capacidade de <span className="font-medium text-white">integrar diferentes áreas</span> da engenharia permite à ESNA desenvolver <span className="font-medium text-white">soluções mais eficientes</span>, reduzir ruídos operacionais e garantir maior controle em <span className="font-medium text-white">todas as etapas do projeto</span>.
           </p>
         </div>
       </section>
@@ -236,11 +236,11 @@ const Index = () => {
       {/* CTA FINAL */}
       <section className="section-surface section-padding text-center border-t border-black/10">
         <div className="container-x flex flex-col items-center gap-10">
-          <h2 className="text-display text-void max-w-4xl">
-            Vamos estruturar seu próximo projeto.
+          <h2 className="text-display text-void max-w-4xl tracking-tighter">
+            <span className="font-light">Vamos</span> <span className="font-bold">estruturar</span> <span className="font-light">seu próximo projeto.</span>
           </h2>
           <p className="text-[20px] md:text-[24px] text-gray-600 font-light tracking-tight max-w-2xl">
-            Entre em contato com a ESNA e desenvolva soluções preparadas para operar com eficiência, clareza e escala.
+            Entre em contato com a ESNA e desenvolva soluções preparadas para operar com <span className="font-medium text-void">eficiência, clareza e escala.</span>
           </p>
           <div className="flex gap-6 mt-4">
             <Link to="/contato" className="btn-esna-primary bg-void text-white hover:bg-gray-800 px-12">
