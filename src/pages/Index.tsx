@@ -8,47 +8,39 @@ const Index = () => {
   return (
     <Layout>
       {/* HERO SECTION */}
-      <section className="min-h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-[60px]">
+      <section className="h-screen bg-void flex flex-col justify-center relative overflow-hidden section-padding mt-0">
         <div className="absolute inset-0 z-0">
           <img
             src={hero}
             alt="ESNA Integrated Engineering"
-            className="w-full h-full object-cover opacity-20 grayscale"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-void/50" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="container-x relative z-10 pt-20">
-          <div className="flex flex-col gap-6 max-w-4xl">
-
-            <h1 className="text-display text-white animate-reveal [animation-delay:200ms]">
-              Construindo a Infraestrutura que Sustenta <span className="text-gray-400">Grandes Operações</span>.
+        <div className="container-x relative z-10 pt-32 flex flex-col items-center text-center">
+          <div className="flex flex-col gap-6 max-w-5xl items-center">
+            <h1 className="text-[48px] md:text-[72px] leading-[1.1] font-sans font-medium tracking-tight text-white animate-reveal [animation-delay:200ms]">
+              Com engenharia integrada para toda decisão estrutural.
             </h1>
-            <p className="text-h1 text-gray-400 animate-reveal [animation-delay:400ms] max-w-2xl">
+            <p className="text-[20px] md:text-[24px] text-gray-200 animate-reveal [animation-delay:400ms] max-w-3xl font-sans">
               Projetamos, estruturamos e executamos sistemas complexos onde a precisão técnica encontra a eficiência operacional absoluta.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8 animate-reveal [animation-delay:600ms]">
-              <Link to="/solucoes" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-10">
-                Começar Projeto
-              </Link>
-              <Link to="/projetos" className="border border-white text-white hover:bg-white hover:text-void px-10 py-3 text-[12px] font-mono uppercase tracking-widest transition-all">
-                Ver Impacto
-              </Link>
-            </div>
           </div>
         </div>
 
-        {/* Hero Footer Stats */}
-        <div className="container-x relative z-10 mt-auto pt-24 grid grid-cols-2 md:grid-cols-4 gap-8 animate-reveal [animation-delay:800ms]">
+        {/* Hero Footer Stats / Video Box placeholder */}
+        <div className="container-x relative z-10 mt-auto pt-24 grid grid-cols-2 md:grid-cols-4 gap-8 animate-reveal [animation-delay:600ms]">
+          {/* We can leave the stats or remove them to match the exact vibe, let's keep them as a subtle footer for the hero */}
           {[
-            { label: "↳ Unidade 01", value: "Energia" },
-            { label: "↳ Unidade 02", value: "Automação" },
-            { label: "↳ Unidade 03", value: "Infra" },
-            { label: "↳ Unidade 04", value: "Gestão" },
+            { label: "Unidade 01", value: "Energia" },
+            { label: "Unidade 02", value: "Automação" },
+            { label: "Unidade 03", value: "Infra" },
+            { label: "Unidade 04", value: "Gestão" },
           ].map((s) => (
-            <div key={s.value} className="flex flex-col gap-2 border-t border-white/20 pt-6">
-              <span className="text-caption text-gray-500">{s.label}</span>
-              <span className="text-h2 text-white">{s.value}</span>
+            <div key={s.value} className="flex flex-col gap-2 border-t border-white/30 pt-6">
+              <span className="text-[14px] font-sans text-gray-300">{s.label}</span>
+              <span className="text-[18px] font-sans font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
@@ -77,7 +69,7 @@ const Index = () => {
                 <p className="text-[11px] text-gray-500 uppercase tracking-widest font-mono font-bold">Entregues com Precisão</p>
               </div>
             </div>
-            <Link to="/sobre" className="btn-palantir-arrow self-start mt-4">
+            <Link to="/sobre" className="btn-esna-arrow self-start mt-4">
               Conheça nossa metodologia →
             </Link>
           </div>
@@ -95,7 +87,7 @@ const Index = () => {
 
               <h2 className="text-display text-void">Soluções que Escalam.</h2>
             </div>
-            <Link to="/solucoes" className="btn-palantir-arrow">Ver todas as frentes →</Link>
+            <Link to="/solucoes" className="btn-esna-arrow">Ver todas as frentes →</Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -171,7 +163,7 @@ const Index = () => {
             Pronto para reconstruir sua <span className="text-gray-400">Vantagem Operacional</span>?
           </h2>
           <div className="flex gap-6">
-            <Link to="/contato" className="btn-palantir-primary bg-white text-void hover:bg-gray-200 px-12">
+            <Link to="/contato" className="btn-esna-primary bg-white text-void hover:bg-gray-200 px-12">
               Solicitar Demo
             </Link>
             <Link to="/solucoes" className="border border-white text-white hover:bg-white hover:text-void px-12 py-3 text-[12px] font-mono uppercase tracking-widest transition-all">

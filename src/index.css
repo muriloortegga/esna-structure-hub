@@ -59,16 +59,16 @@
     @apply h-[52px] flex items-center bg-white/90 backdrop-blur-md border-b border-black/10 sticky top-0 z-50 transition-all;
   }
 
-  .btn-palantir-primary {
+  .btn-esna-primary {
     @apply bg-void text-white border border-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-white hover:text-void;
   }
-  .btn-palantir-secondary {
+  .btn-esna-secondary {
     @apply border border-void text-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-black/5;
   }
-  .btn-palantir-ghost {
+  .btn-esna-ghost {
     @apply text-void px-6 py-3 rounded-none text-[12px] font-mono uppercase tracking-widest transition-all hover:bg-black/5;
   }
-  .btn-palantir-arrow {
+  .btn-esna-arrow {
     @apply text-void text-[12px] font-mono uppercase tracking-widest hover:text-slate transition-colors;
   }
 
